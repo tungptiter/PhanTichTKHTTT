@@ -1,0 +1,19 @@
+.home_box {
+  width: 80%;
+  background-color: #f2f2f2;
+  margin-right: auto;
+  margin-left: auto;
+}
+.home_box .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.home_box .row .item {
+  width: 23.75%;
+  height: 200px;
+  background-color: blue;
+}
+
+/*# sourceMappingURL=home.css.map */

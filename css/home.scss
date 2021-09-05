@@ -1,0 +1,25 @@
+$primary: #3167eb;
+$gray: #f2f2f2;
+
+.home_box {
+
+	width: 80%;
+	background-color: $gray;
+	margin-right: auto;
+	margin-left: auto;
+
+	.row {
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+
+		.item {
+
+			width: 23.75%;
+			height: 200px;
+			background-color: blue;
+		}
+	}
+}
