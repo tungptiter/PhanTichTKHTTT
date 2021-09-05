@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="CSS.css">
+
+    <title>Nhân viên duyệt đơn xuất kho</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-12">
+            <div id="tieuDe" style="background-color: rgb(250, 250, 250);">
+                <div class="col-12 d-flex justify-content-center" style="padding-top: 5mm;">
+                    <h4 class="text-primary">Đơn hàng đang chờ được duyệt</h4>
+                </div>
+                <div class="row" style="margin: 0.5cm 4cm;">
+                    <table class="table">
+                        <thead>
+                            <tr style="background-color: rgb(211, 211, 223);">
+                                <th scope="col">Mã hóa đơn</th>
+                                <th scope="col">Tên khách hàng</th>
+                                <th scope="col">Thời gian mua</th>
+                                <th scope="col">Chi tiết</th>
+                            </tr>
+                        </thead>
+                        <!-- thông tin chung tất cả hóa đơn chưa duyệt -->
+                        <tbody>
+                            <tr>
+                                <th scope="row">1fr</th>
+                                <td>Mark</td>
+                                <td>1/1/1122</td>
+                                <td><a role="button" id="xemthem" onclick="xemThem()">xem thêm</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ffr2</th>
+                                <td>Jacob</td>
+                                <td>2/2/2222</td>
+                                <td><a role="button" id="xemthem" onclick="xemThem()">xem thêm</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">34553</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td><a role="button" id="xemthem" onclick="xemThem()">xem thêm</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- hiện chi tiết hóa đơn -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div id="hoaDon" class="col-8">
+                    <div id="quayLai" role="button" style="margin-bottom: 1cm; border-bottom: blue solid 1px;"
+                        onclick="quayLai()">
+                        <i class="fas fa-arrow-left" style="color: blue;"></i>
+                        <span style="color: blue;">quay lại</span>
+                    </div>
+                    <h4 class="d-flex justify-content-center"
+                        style="color: blue; font-family: 'Times New Roman', Times, serif;">
+                        <strong>Bách hóa trực tuyến</strong>
+                    </h4>
+                    <div class="">
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <div class="thongTinKH">
+                                    <i class="fas fa-circle"></i>
+                                    <span>Khách hàng:</span>
+                                </div>
+                                <div class="thongTinKH">
+                                    <i class="fas fa-circle"></i>
+                                    <span>Số điện thoại:</span>
+                                </div>
+                                <div class="thongTinKH">
+                                    <i class="fas fa-circle"></i>
+                                    <span>Địa chỉ:</span>
+                                </div>
+                                <div class="thongTinKH">
+                                    <i class="fas fa-circle"></i>
+                                    <span>Ngày mua:</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row"><i class="fas fa-hotel d-flex justify-content-center"></i></div>
+                                <div class="row d-flex justify-content-center text-primary"
+                                    style="font-weight: bold; margin-top: 5px;">
+                                    Km10-Nguyễn Trãi
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <table class="table">
+                                <thead class="table-title">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Số lượng</th>
+                                        <th>Đơn giá</th>
+                                        <th>Tổng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">1</td>
+                                        <td>abc</td>
+                                        <td id="soLuong">2</td>
+                                        <td id="donGia">3000</td>
+                                        <td id="tong">6000</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">2</td>
+                                        <td>abc</td>
+                                        <td id="soLuong">2</td>
+                                        <td id="donGia">3000</td>
+                                        <td id="tong">6000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col align-self-start" style="color: rgb(0, 0, 255); font-size: 14px;">
+                            Cảm ơn đã mua sản phẩm!
+                        </div>
+                        <div class="col"></div>
+                        <div class="col align-self-end" style="float: right;">
+                            <strong>Thành tiền: 120000 (đồng)</strong>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 5mm; border-top: blue solid 1px; padding:6mm 0mm 0mm 0mm;"
+                        class="d-flex justify-content-around">
+                        <div>
+                            <label>chọn NV giao hàng</label>
+                            <select id="chonNV" onclick="chonNV()" style="width: fit-content;">
+                                <option></option>
+                                <option>Nguyễn Nguyễn</option>
+                                <option>xyz</option>
+                            </select>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" id="duyetDon" class="btn btn-warning" onclick="chonDuyetDon()">Duyệt
+                                đơn</button>
+                            <button type="button" id="in" class="btn btn-primary" onclick="chonIn()">In hóa đơn</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+
+            <!-- hóa đơn 2 -->
+            
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="JS.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+
+</html>
