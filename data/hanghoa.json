@@ -1,0 +1,69 @@
+[
+    {
+        "mancc": "tth",
+        "ten": "Thaco Trường Hải",
+        "diachi": "Quảng Nam",
+        "dshh": [
+            {
+                "mahh": "xecon",
+                "tenhh": "Xe Con",
+                "donvi": "chiếc"
+            },
+            {
+                "mahh": "xetai",
+                "tenhh": "Xe Tải",
+                "donvi": "Chiếc"
+            },
+            {
+                "mahh": "xebantai",
+                "tenhh": "Xe Bán Tải",
+                "donvi": "Chiếc"
+            }
+        ]
+        
+    },
+    {
+        "mancc": "hp",
+        "ten": "Hòa Phát",
+        "diachi": "Hưng Yên",
+        "dshh": [
+            {
+                "mahh": "thep",
+                "tenhh": "Thép",
+                "donvi": "M"
+            },
+            {
+                "mahh": "nha",
+                "tenhh": "Nhà",
+                "donvi": "Căn"
+            },
+            {
+                "mahh": "banh",
+                "tenhh": "Bánh Ichi",
+                "donvi": "Thùng"
+            }
+        ]
+    },
+    {
+        "mancc": "vinmartml",
+        "ten": "Vinmart Mỗ Lao",
+        "diachi": "Mỗ Lao, Hà Đông",
+        "dshh": [
+            {
+                "mahh": "botmi",
+                "tenhh": "Bột Mì",
+                "donvi": "Kg"
+            },
+            {
+                "mahh": "cocacola",
+                "tenhh": "Coca Cola",
+                "donvi": "Lon"
+            },
+            {
+                "mahh": "gao",
+                "tenhh": "Gạo",
+                "donvi": "Kg"
+            }
+        ]
+    }
+]
