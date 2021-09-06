@@ -1,0 +1,111 @@
+.header_box {
+  position: fixed;
+  color: white;
+  width: 100%;
+  height: 100px;
+  background-color: #3167eb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.header_box .header_logo {
+  width: 15%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+.header_box .header_logo img {
+  width: 100px;
+  height: auto;
+}
+.header_box .header_search_bar {
+  width: 65%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.header_box .header_search_bar input {
+  padding: 0 10px 0 10px;
+  width: calc(100% - 50px);
+  height: 40px;
+  border: none;
+}
+.header_box .header_search_bar input:active, .header_box .header_search_bar input:focus, .header_box .header_search_bar input:focus-visible, .header_box .header_search_bar input:visited {
+  border: none;
+  outline: none;
+}
+.header_box .header_search_bar img {
+  width: 45px;
+  height: 35px;
+  background-color: #3167eb;
+  padding: 5px 10px 5px 10px;
+}
+.header_box .header_auth {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header_box .header_auth .header-auth_link_seprator {
+  border-right: 1px solid white;
+  height: 0.8125rem;
+  background-color: white;
+  width: 0.5px;
+}
+.header_box .header_auth svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.footer_box .footer_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.footer_box .footer_description .footer_description_title {
+  font-size: 150%;
+  margin-top: 40px;
+}
+.footer_box .footer_description .footer_description_content {
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.cart_link {
+
+  color:  white;
+}
+
+.cart_link:hover {
+
+  color:  white;
+  opacity: 0.8;
+}
+
+.icon_user:hover {
+
+  cursor: pointer;
+}
+
+.menu_manager .sub_menu {
+
+  position: absolute; 
+  width: 200px; 
+  background-color: white; 
+  color: black;
+  top: 40px;
+  right: -100px;
+  display: none;
+}
+
+.sub_menu div {  
+  font-size: 90%;
+  padding:  5px 10px 5px 10px;
+  border: 1px solid black;
+}

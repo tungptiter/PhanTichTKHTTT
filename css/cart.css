@@ -1,0 +1,106 @@
+.cart_box {
+  padding-top:  120px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 100px;
+}
+.cart_box .cart_title {
+  font-size: 200%;
+  width: 100%;
+  text-align: center;
+}
+.cart_box .cart_header {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.cart_box .cart_items {
+  margin-top: 20px;
+}
+.cart_box .cart_items .item {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.cart_box .cart_items .item .product {
+  display: flex;
+}
+.cart_box .cart_items .item .product .img {
+  width: 100px;
+  height: 100px;
+}
+.cart_box .cart_items .item .product .img img {
+  width: 100%;
+  height: auto;
+}
+.cart_box .cart_items .item .product .description {
+  width: calc(100% - 150px);
+  overflow-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  padding-left: 20px;
+}
+.cart_box .cart_items .item .quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart_box .cart_items .item .quantity .value {
+  padding: 0 15px 0 15px;
+}
+.cart_box .cart_items .item .quantity .icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_box .cart_items .item .quantity .icon img {
+  width: 20px;
+  height: 20px;
+}
+.cart_box .cart_items .item .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart_box .cart_items .item .remove {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart_box .product {
+  width: 60%;
+}
+.cart_box .price {
+  width: 15%;
+}
+.cart_box .quantity {
+  width: 25%;
+}
+.cart_box .remove {
+  width: 10%;
+}
+.cart_box .total .title, .cart_box .total .value {
+  font-size: 170%;
+  text-align: right;
+  padding-right: 20px;
+}
+.cart_box .payment {
+  text-align: right;
+  padding-top: 20px;
+}
+.cart_box .payment .button_payment {
+  font-size: 120%;
+  padding: 10px 50px 10px 50px;
+}
+
+/*# sourceMappingURL=cart.css.map */
