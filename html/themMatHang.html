@@ -8,6 +8,8 @@
     <title>Thêm Thông Tin Mặt Hàng</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/btn_specical.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
     <!-- <link rel="stylesheet" href="../css/search.css"> -->
 </head>
@@ -46,7 +48,7 @@
 
                 <!-- Nhập số lượng -->
                 <div class="col-md-5">
-                    <h5 class="my-3">Số Lượng Hàng Trong Kho</h5>
+                    <h5 class="my-3">Số Lượng Hàng Cần Nhập</h5>
                     <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
                 </div>
                 <!-- End of Nhập số lượng -->
@@ -58,12 +60,24 @@
                 </div>
                 <!-- End of Hiển thị đơn giá -->
 
+
+                <!-- NSX và HSD -->
+                <div class="col-md-5">
+                    <h5 class="my-3">Ngày Sản Xuất</h5>
+                    <input placeholder="Select date" type="date" class="form-control">
+                </div>
+                <div class="col-md-5">
+                    <h5 class="my-3">Hạn Sử Dụng</h5>
+                    <input placeholder="Select date" type="date" class="form-control">
+                </div>
+                <!-- End of NSX và HSD -->
+
                 <!-- Hiển thị Thành tiền -->
                 <div class="col-md-5">
                     <h5 class="my-3">Loại Hàng Hóa</h5>
 
-                    <div class="btn-group">
-                        
+                    <div class="btn-group d-grid gap-5">
+
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             Đồ Gia Dụng
@@ -77,43 +91,129 @@
                             <a class="dropdown-item" href="#">Thêm mới</a>
                         </div>
                     </div>
+
+
                 </div>
                 <!-- End of Hiển thị Thành tiền -->
-
-
                 <div class="col-md-5">
                     <h5 class="my-3">Mô Tả Hàng Hóa</h5>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <!-- Buttom hóa đơn và in hóa đơn -->
-                <!-- <div class="col-md-3">
-                    <h5 class="my-3">Xác nhận</h5>
-                    <button type="button" class="btn btn-outline-success">Lưu Thông Tin</button>
-                </div> -->
 
-                <button type="button" class="btn btn-outline-success my-3" style="height: 3rem; width:12rem;">Lưu Thông Tin</button>
+                <div class="col-md-5">
+                    <div class="my-3">
+                        <label for="formFile" class="form-label">Chọn Ảnh Mặt Hàng</label>
+                        <input class="form-control" type="file" id="formFile" multiple>
+                      </div>
+                </div>
+
+                <div class="col-md-5">
+
+                </div>
+                <div class="col-md-12 d-inline-flex justify-content-center" >
+                    <button type="button" onclick="luuThongTin()" class="btn btn-outline-success my-3"
+                    style="height: 3rem; width:12rem;">Lưu Thông Tin
+                </button>
+                </div>
+                <!-- Buttom hóa đơn và in hóa đơn -->
+                <!-- <div class="col-md-5">
+                    <button type="button" onclick="luuThongTin()" class="btn btn-outline-success my-3"
+                        style="height: 3rem; width:12rem;">Lưu Thông Tin
+                    </button>
+                
+                </div> -->
                 <!-- End of Buttom hóa đơn và in hóa đơn -->
             </div>
         </div>
 
+        
 
 
     </section>
+    
+    <!-- <script>
+        function myFunction() {
+            swal("Lưu Thông Tin Thành Công", "You clicked the button!", "success");
+        }
+    </script> -->
+    <!-- 
+    <script type="text/javascript">
+    $(function() {
+        $('.datepicker').datepicker({
+            // Escape any “rule” characters with an exclamation mark (!).
+            format: 'You selecte!d: dddd, dd mmm, yyyy',
+            formatSubmit: 'yyyy/mm/dd',
+            hiddenPrefix: 'prefix__',
+            hiddenSuffix: '__suffix'
+        })
+    })
+        
+    </script> -->
+
+    <script>
+        function luuThongTin() {
+
+            var toastMixin = Swal.mixin({
+                toast: true,
+                icon: 'success',
+                title: 'General Title',
+                animation: false,
+                position: 'top-right',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+
+            toastMixin.fire({
+                animation: true,
+                title: 'Signed in Successfully'
+            });
+
+            // xử lý xác nhận lưu thành công
+            // document.querySelector(".second").addEventListener('click', function () {
+            //     toastMixin.fire({
+            //         animation: true,
+            //         title: 'Signed in Successfully'
+            //     });
+            // });
+
+        }
 
 
+    </script>
 
-    <!-- <script src="../js/inputnumber.js"></script> -->
     <script type="text/javascript" src="../data/hanghoa.json"></script>
     <script src="../js/search.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- <script src="../js/bootstrap.bundle.js"></script> -->
 
+    <!-- hiển thị thông báo alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- End of hiển thị thông báo alert -->
+    <!-- hiển thị thông báo của sweet alert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <!-- End of hiển thị thông báo của sweet alert2 -->
+
+
+    <!-- cdn js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- End of cdn js -->
     <!-- sửa lỗi không dropdown được -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- End of sửa lỗi không dropdown được -->
 
-    
 </body>
 
 </html>
