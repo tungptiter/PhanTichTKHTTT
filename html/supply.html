@@ -3,6 +3,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="./../css/base.css">
 <link rel="stylesheet" type="text/css" href="./../css/supply.css">
+<link rel="stylesheet" type="text/css" href="./../css/btn_specical.css">
 <head>
     <meta charset="utf-8">
     <title>Shopping Funny</title>
@@ -40,13 +41,17 @@
             </div>
         </div>
     </div>
+
+    <!-- form nhap hang hoa -->
+
     <section class="nhan-hang-hoa">
         <div class="container">
             <h3 class="text-center">Nhập Hàng Hóa</h3>
             <div class="row align-items-center justify-content-center ">
                 <!-- Nhập nhà cung cấp-->
                 <div class="col-md-5">
-                    <form class="search_form d-flex mt-3 g-3">
+                    <h5 class="my-3">Tên Nhà Cung Cấp</h5>
+                    <form class="search_form d-flex">
                         <input class="form-control me-2" id="search" type="search" placeholder="Nhập tên nhà cung cấp"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">
@@ -58,12 +63,17 @@
                         </button>
                     </form>
                     <div id="match-list"></div>
+
+                    <!-- test -->
+                    
+                    <!-- end of test -->
                 </div>
                 <!--end of Nhập nhà cung cấp-->
 
                 <!-- Nhập hàng hóa -->
                 <div class="col-md-5">
-                    <form class="search_form d-flex mt-3 g-3">
+                    <h5 class="my-3">Tên Hàng Hóa</h5>
+                    <form class="search_form d-flex">
                         <input class="form-control me-2" id="search_hh" type="search"
                             placeholder="Nhập tên hàng hóa tìm" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">
@@ -108,7 +118,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        Thành Toán Online
+                        <b>Thành Toán Online</b>
                       </a>
 
                       <a href="#" class="btn_special_blue mx-3">
@@ -116,7 +126,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        In Hóa Đơn
+                        <b>In Hóa Đơn</b>
                       </a>
                     <!-- <button type="button" class="btn btn-outline-success d-inline-flex">Thành tiền</button> -->
                     <!-- <button type="button" class="btn btn-outline-info">In hóa đơn</button> -->
@@ -126,7 +136,7 @@
             </div>
 
             <!-- table -->
-            <table class="table table-sm my-5 mx-lg-5">
+            <table class="table table-sm my-5">
                 <thead>
                   <tr>
                     <th scope="col">STT</th>
@@ -173,6 +183,21 @@
 
         
     </section>
+
+    <form autocomplete=off class="search_form d-inline-flex">
+        <input class="form-control me-2" id="myInput" type="search" placeholder="Nhập tên nhà cung cấp"
+            aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </button>
+    </form>
+
+    <!-- end of form nhap hang hoa -->
+
     <div class="footer_box">
         <div class="footer_description">
             <div class="footer_description_title">BLOG CỦA CHÚNG TÔI</div>
