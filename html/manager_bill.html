@@ -28,7 +28,7 @@
 					<span style="padding-left: 10px">Admin</span>
 				</a>
 				<div class="sub_menu">
-					<a href="#"><div>My Profile</div></a>
+					<a href="./profile.html"><div>My Profile</div></a>
                     <a href="./supply.html"><div>Nhập hàng hóa</div></a>
                     <a href="./add_good.html"><div>Thêm thông tin mặt hàng</div></a>
                     <a href="./confirm.html"><div>Duyệt đơn</div></a>
@@ -47,7 +47,7 @@
                     <h3>thông tin hóa đơn</h3>
                 </div>
                 <div class="col-12 d-flex justify-content-end" style="font-size: 15px; padding-right: 2.8cm;">
-                    <span class="me-3">chọn ngày mua</span>
+                    <span class="me-3">chọn hóa đơn theo ngày đã mua hàng</span>
                     <select id="chonNgay" onclick="chonNgay()">
                         <option value=""></option>
                         <option value="">1/1/2022</option>
@@ -58,20 +58,22 @@
             <div class="row text-body">
                 <div class="col-6 text-body-left">
                     <div class="text-body-item">
-                        <i class="fas fa-circle"></i>
                         <span>Khách hàng:</span>
                     </div>
                     <div class="text-body-item">
-                        <i class="fas fa-circle"></i>
-                        <span id="ngayMua" >Ngày mua:</span>
+                        <span>Số điện thoại:</span>
                     </div>
                     <div class="text-body-item">
-                        <i class="fas fa-circle"></i>
-                        <span id="thanhToan">Trạng thái: đã/chưa thanh toán</span>
+                        <span>Địa chỉ:</span>
                     </div>
                 </div>
                 <div class="col-6 text-body-right">
-                    <i class="fas fa-shopping-cart"></i>
+                    <div class="text-body-item" id="ngayMua">
+                        Ngày mua
+                    </div>
+                    <div class="text-body-item">
+                        Trạng thái: đã/chờ duyệt
+                    </div>
                 </div>
             </div>
 <!-- bảng thông tin các sản phẩm đã mua -->
@@ -116,13 +118,18 @@
                         <div class="mt-2" id="thanhTien"><strong>Thành tiền:</strong></div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-9"></div>
+                    <div class="col-3">
+                        <div class="mt-2" id="thanhTien"><i style="font-size: 13px;">(đã thanh toán/thanh toán khi nhận hàng)</i></div>
+                    </div>
+                </div>
             </div>
 <!-- footer -->
             <div class="row text-footer" style="margin: 0.8cm 0cm; 
                                                 border-top: rgb(191, 197, 252) solid 1px;
                                                 padding: 5mm 1cm;">
                 <div class="col-9" style="padding-left: 2cm; color: #4187f0;">cảm ơn quý khách!</div>
-                <div class="col-3"><button class="btn btn-primary" id="nutThanhToan">thanh toán</button></div>
             </div>
 
 
