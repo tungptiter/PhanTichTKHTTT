@@ -1,26 +1,33 @@
-
 /*# sourceMappingURL=base.css.map */
-.home_box {
-  padding-top: 120px;
-  padding-bottom: 100px;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+body {
+  background-color: #F0F0F0;
 }
+
+.home_box {
+  padding-top: 110px;
+  padding-bottom: 100px;
+  width: 950px;
+  margin-left: calc((100% - 950px)/2 + 125px);
+}
+
+.home_notfication {
+  color: #3167eb;
+}
+
 .home_box .list {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  padding-top: 10px;
   flex-wrap: wrap;
   gap: 5px;
 }
+
 .home_box .list .item {
-  width: 300px;
+  width: calc((100% - 3px)/4);
   height: 350px;
-  background-color: white;
 }
+
 .home_box .list .item .image {
   width: 100%;
   height: 200px;
@@ -28,14 +35,27 @@
   justify-content: center;
   padding-top: 5px;
 }
+
 .home_box .list .item .image img {
-  width: 100%;
-  height: auto;
+  width: 170px;
+  height: 170px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
+
+.home_box .list .item:hover {
+  cursor: pointer;
+}
+.home_box .list .item:hover .image img {
+  width: 180px;
+  height: 180px;
+}
+
 .home_box .list .item .info {
   width: 100%;
   padding: 0 10px 0 10px;
 }
+
 .home_box .list .item .info .name {
   height: 50px;
   overflow-wrap: break-word;
@@ -45,11 +65,145 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
 .home_box .list .item .info .price {
   padding-top: 10px;
   color: #e70001;
 }
+
 .home_box .list .item .info button {
   width: 100%;
   margin-top: 10px;
 }
+
+.line_items {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #3167eb;
+  padding: 0px 3px 2px 3px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.line_items .more_link {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.line_items .more_link a {
+  text-decoration: none;
+  color: blue;
+}
+.line_items .more_link a:hover {
+  color: blue;
+  cursor: pointer;
+}
+.line_items .items_title {
+  font-weight: bold;
+  color: white;
+  font-size: 130%;
+  padding: 10px 0px 10px 0px;
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.line_items .items_title .text {
+  display: flex;
+  align-items: center;
+}
+.line_items .items_title .select {
+  font-size: 70%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.line_items .items_title .select .option {
+  width: 100px;
+  height: 45px;
+  padding: 0px 5px 0px 5px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+.line_items .items_title .select .option:hover {
+  opacity: 0.9;
+}
+.line_items .items_title .select .direction {
+  background-color: inherit;
+  border: none;
+  color: white;
+  transform: scale(2.5);
+  padding-bottom: 5px;
+}
+.line_items .items_title .select .direction:hover {
+  opacity: 0.7;
+}
+.line_items .items_content {
+  display: flex;
+  background-color: #eee;
+  justify-content: space-between;
+}
+.line_items .items_content .item {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+.line_items .items_content .button_to_cart {
+  border: 1px solid #3167eb;
+  color: #3167eb;
+  background-color: white;
+  border-radius: 5px;
+  height: 35px;
+}
+.line_items .items_content .button_to_cart:hover {
+  background-color: #3167eb;
+  color: white;
+}
+
+.menu_bar {
+  width: 250px;
+  background-color: white;
+  position: absolute;
+  top: 140px;
+  left: calc(20px + 125px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.menu_bar .title {
+  text-align: center;
+  background-color: #3167eb;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 110%;
+}
+.menu_bar .item {
+  padding: 10px 25px;
+  position: relative;
+}
+.menu_bar .item .sub_bar {
+  background-color: white;
+  position: absolute;
+  left: 250px;
+  top: 0px;
+  width: 250px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.menu_bar .item .sub_bar .sub_item {
+  padding: 10px 25px;
+}
+.menu_bar .item .sub_bar .sub_item:hover {
+  cursor: pointer;
+  background-color: rgba(49, 103, 235, 0.2);
+}
+.menu_bar .item:hover {
+  cursor: pointer;
+  background-color: rgba(49, 103, 235, 0.2);
+}
+.menu_bar .fa {
+  font-size: 120%;
+  font-weight: bold;
+  float: right;
+}
+
+/*# sourceMappingURL=home.css.map */
