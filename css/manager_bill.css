@@ -16,8 +16,7 @@
 }
 .text-body-right{
     margin-top: 5mm;
-    display: flex;
-    justify-content: center;
+    font-weight: bold;
 }
 .text-body-left{
     margin-top: 5mm;

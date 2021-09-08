@@ -1,0 +1,10 @@
+.form-check{
+    border: 1px solid rgb(202, 208, 241);
+    padding: 10px 40px;
+}
+select[name="chonHuyen"], select[name="chonTinh"]{
+    padding-left: 10px;
+    height: 38px;
+    outline-color: #86a2f0;
+    border: rgb(207, 207, 216) solid 1px;
+}
