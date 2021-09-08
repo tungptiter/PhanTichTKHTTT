@@ -282,6 +282,7 @@ a{
  
  .popup .notification_dd:before{
 	display: none;
+  /* color: black; */
  }
  
  .popup .notification_dd li.title{
