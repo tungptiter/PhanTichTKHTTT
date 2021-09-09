@@ -3,7 +3,7 @@
   color: white;
   width: 100%;
   height: 100px;
-  background-color: #3167eb;
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,6 +12,7 @@
   padding-right: 10%;
   z-index: 99;
   box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+  border-bottom: 2px solid #3167eb;
 }
 .header_box .header_logo {
   width: 15%;
@@ -35,10 +36,11 @@
   width: calc(100% - 50px);
   height: 40px;
   border: none;
+  border: 2px solid #3b80f9
 }
 .header_box .header_search_bar input:active, .header_box .header_search_bar input:focus, .header_box .header_search_bar input:focus-visible, .header_box .header_search_bar input:visited {
-  border: none;
   outline: none;
+  border: 2px solid #3b80f9
 }
 .header_box .header_search_bar img {
   width: 45px;
@@ -82,12 +84,13 @@
 
 .cart_link {
 
-  color:  white;
+  color:  #3167eb;
+  font-weight: bold;
 }
 
 .cart_link:hover {
 
-  color:  white;
+  color:  #3b80f9;
   opacity: 0.8;
 }
 
@@ -111,4 +114,354 @@
   font-size: 90%;
   padding:  5px 10px 5px 10px;
   border: 1px solid black;
+}
+
+.fa-search {
+
+  margin-left: 5px;
+  color: #3167eb;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #3167eb;
+  font-size: 130%;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+
+.fa-search:hover {
+
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fa-shopping-cart {
+
+  color: #3167eb;
+  width: 40px;
+  height: 40px;
+  font-size: 150%;
+  padding-top: 25%;
+}
+
+.fa-chevron-down {
+
+  color: #3167eb;
+}
+
+ 
+ .wrapper{
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .navbar{
+   background: #fff;
+   width: 100%;
+   height: 60px;
+   padding: 0 25px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .navbar .navbar_left .logo a{
+  font-family: 'Trade Winds';
+  font-size: 20px;
+ }
+ 
+ .navbar .navbar_right{
+  display: flex;
+ }
+ 
+ .navbar .navbar_right img{
+   width: 35px;
+ }
+ 
+ .navbar .navbar_right .icon_wrap{
+   cursor: pointer;
+ }
+ 
+ .navbar .navbar_right .notifications{
+   margin-right: 25px;
+ }
+ 
+ .navbar .navbar_right .notifications .icon_wrap{
+   font-size: 28px;
+   color: #3167eb;
+ }
+
+ .navbar .navbar_right .notifications .icon_wrap:hover{
+   opacity: 0.9;
+ }
+ 
+ .navbar .navbar_right .profile,
+ .navbar .navbar_right .notifications{
+   position: relative;
+   margin-left: 20px;
+ }
+ 
+ .navbar .profile .profile_dd,
+ .notification_dd{
+   position: absolute;
+   top: 48px;
+   right: -15px;
+   user-select: none;
+   background: #fff;
+   border: 1px solid #c7d8e2;
+   width: 350px;
+   height: auto;
+   display: none;
+   border-radius: 3px;
+   box-shadow: 10px 10px 35px rgba(0,0,0,0.125),
+         -10px -10px 35px rgba(0,0,0,0.125);
+ }
+ 
+ .navbar .profile .profile_dd:before,
+ .notification_dd:before{
+   content: "";
+   position: absolute;
+   top: -20px;
+   right: 15px;
+   border: 10px solid;
+   border-color: transparent transparent #fff transparent;
+ }
+ 
+ /* tự bổ sung ul vào. Cần xem xét responsive */
+ .notification_dd ul {
+  padding-left: 1rem;
+  padding-right: 1rem;
+/*     padding-top: 0.5rem; */
+/*     padding-bottom: 2rem; */
+}
+/* end of tự bổ sung ul vào. Cần xem xét responsive */
+
+ .notification_dd li {
+   border-bottom: 1px solid #f1f2f4;
+   /* padding: 10px 20px; */
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .notification_dd li .notify_icon{
+   display: flex;
+ }
+ 
+ .notification_dd li .notify_icon .icon{
+   display: inline-block;
+   /* background: url('https://i.imgur.com/MVJNkqW.png') no-repeat 0 0; */
+   background: url('./../img/icons.png');
+   width: 40px;
+   height: 42px;
+ }
+ 
+ .notification_dd li.baskin_robbins .notify_icon .icon{
+   background-position: 0 -43px;
+ }
+ 
+ .notification_dd li.mcd .notify_icon .icon{
+   background-position: 0 -86px;
+ }
+ 
+ .notification_dd li.pizzahut .notify_icon .icon{
+   background-position: 0 -129px;
+ }
+ 
+ .notification_dd li.kfc .notify_icon .icon{
+   background-position: 0 -178px;
+ }
+ 
+ .notification_dd li .notify_data{
+   margin: 0 15px;
+   width: 185px;
+ }
+ 
+ .notification_dd li .notify_data .title{
+   color: #000;
+   font-weight: 600;
+ }
+ 
+ .notification_dd li .notify_data .sub_title{
+   font-size: 14px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-top: 5px;
+   color: black;
+ }
+ 
+ .notification_dd li .notify_status p{
+   font-size: 12px;
+ }
+ 
+ .notification_dd li.success .notify_status p{
+   color: #47da89;
+ }
+ 
+ .notification_dd li.failed .notify_status p{
+   color: #fb0001;
+ }
+ 
+ .notification_dd li.show_all{
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .notification_dd li.show_all p{
+   font-weight: 700;
+   color: #3b80f9;
+   cursor: pointer;
+ }
+ 
+ .notification_dd li.show_all p:hover{
+   text-decoration: underline;
+ }
+ 
+ .navbar .navbar_right .profile .icon_wrap{
+   display: flex;
+   align-items: center;
+ }
+ 
+ .navbar .navbar_right .profile .name{
+   display: inline-block;
+   margin: 0 10px;
+   color: #3b80f9;
+ }
+
+ .navbar .navbar_right .profile .name:hover{
+   opacity: 0.8;
+ }
+ 
+ .navbar .navbar_right .icon_wrap:hover,
+ .navbar .navbar_right .profile.active .icon_wrap,
+ .navbar .navbar_right .notifications.active .icon_wrap{
+   color: #3b80f9;
+ }
+  
+ .navbar .profile .profile_dd{
+   width: 250px;
+ }
+ .navbar .profile .profile_dd:before{
+   right: 10px;
+ }
+ 
+ .navbar .profile .profile_dd ul li {
+   border-bottom: 1px solid #f1f2f4;
+   list-style-type: none;
+ }
+ 
+ .navbar .profile .profile_dd ul li  a{
+   display: block;
+   padding: 10px 20px;
+   position: relative;
+ }
+ 
+ .navbar .profile .profile_dd ul li  a .picon{
+   display: inline-block;
+   width: 30px;
+ }
+ 
+ .navbar .profile .profile_dd ul li  a:hover{
+   color: #3b80f9;
+   background: #f0f5ff;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+ }
+ 
+ .navbar .profile .profile_dd ul li.profile_li a:hover {
+   background: transparent;
+   cursor: default;
+   color: #7f8db0;
+ }
+ 
+ .navbar .profile .profile_dd ul li .btn{
+   height: 32px;
+   padding: 3px 10px;
+   color: #fff;
+   border-radius: 3px;
+   cursor: pointer;
+   text-align: center;
+   background: #3b80f9;
+   width: 125px;
+   margin: 5px auto 15px;
+ }
+ 
+ .navbar .profile .profile_dd ul li .btn:hover{
+   background: #6593e4;
+ }
+ 
+ .navbar .profile.active .profile_dd,
+ .navbar .notifications.active .notification_dd{
+   display: block;
+ }
+ 
+ .popup {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transition: all 0.2s ease;
+   display: none;
+ }
+ 
+ .popup .shadow {
+   width: 100%;
+   height: 100%;
+   background: #000;
+   opacity: 0.5;
+ }
+ 
+ .popup .inner_popup {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 100%;
+   height: auto;
+ }
+ 
+ .popup .notification_dd{
+   display: block;
+   position: static;
+   margin: 0 auto;
+   height: 357px;
+   overflow: auto;
+ }
+ 
+ .popup .notification_dd:before{
+  display: none;
+ }
+ 
+ .popup .notification_dd li.title{
+   font-weight: 700;
+   color: #3b80f9;
+   display: flex;
+   justify-content: center;
+   position: relative;
+ }
+ 
+ .popup .notification_dd li.title .close{
+   position: absolute;
+   top: 2px;
+   right: 10px;
+   font-size: 20px;
+   cursor: pointer;
+ }
+ 
+ .popup .notification_dd li.title .close:hover{
+   opacity: 0.5;
+ }
+
+ .profile_ul {
+
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.profile_ul a {
+
+  text-decoration: none;
 }

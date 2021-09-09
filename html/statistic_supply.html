@@ -3,43 +3,294 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="./../css/base.css">
 <link rel="stylesheet" type="text/css" href="./../css/statistic_supply.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- notification and profile -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="./../css/base.css">
+<link rel="stylesheet" type="text/css" href="./../css/add_good.css">
+<!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".profile .icon_wrap").click(function () {
+            $(this).parent().toggleClass("active");
+            $(".notifications").removeClass("active");
+        });
+
+        $(".notifications .icon_wrap").click(function () {
+            $(this).parent().toggleClass("active");
+            $(".profile").removeClass("active");
+        });
+
+        $(".show_all .link").click(function () {
+            $(".notifications").removeClass("active");
+            $(".popup").show();
+        });
+
+        $(".close").click(function () {
+            $(".popup").hide();
+        });
+    });
+</script>
 <head>
 	<meta charset="utf-8">
 	<title>Shopping Funny</title>
 </head>
 <body>
 	<div class="header_box">
-		<div class="header_logo">
-			<a href="./home.html"><img src="./../img/icon_logo.png"></a>
-		</div>
-		<div class="header_search_bar">
-			<input type="text" name="header_search_bar_input" placeholder="Hi Boss!">
-			<img src="./../img/icon_search.png">			
-		</div>
-		<div class="header_auth">
-			<a class="cart_link" href="cart.html">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-				  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-				</svg>
-			</a>
-			<div style="position: relative;" class="menu_manager">
-				<a class="icon_user" style="color: white; text-decoration: none;">
-					<img src="./../img/icon_user.png" style="width: 25px;">
-					<span style="padding-left: 10px">Admin</span>
-				</a>
-				<div class="sub_menu">
-					<a href="./profile.html"><div>My Profile</div></a>
-                    <a href="./supply.html"><div>Nhập hàng hóa</div></a>
-                    <a href="./add_good.html"><div>Thêm thông tin mặt hàng</div></a>
-                    <a href="./confirm.html"><div>Duyệt đơn</div></a>
-                    <a href="./statistic_goods.html"><div>Thống kê mặt hàng theo doanh thu</div></a>
-                    <a href="./statistic_guest.html"><div>Thống kê khách hàng theo doanh thu</div></a>
-                    <a href="./statistic_supply.html"><div>Thống kê nhà cung cấp theo lượng mặt hàng nhập</div></a>
-                    <a href="./manager_bill.html"><div>Tra cứu thông tin hóa đơn</div></a>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="header_logo">
+            <a href="./home.html"><img src="./../img/icon_logo.png"></a>
+        </div>
+        <div class="header_search_bar">
+            <input type="text" name="header_search_bar_input" placeholder="Tìm kiếm ...">
+            <i class="fas fa-search"></i>           
+        </div>
+        <div class="header_auth">
+            <!-- <div class="wrapper"> -->
+                <div class="navbar" style="background-color: inherit;">
+
+                    <div class="navbar_right">
+                        <div class="cart">
+                            <a href="./cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div class="notifications">
+                            <div class="icon_wrap"><i class="far fa-bell"></i></div>
+        
+                            <div class="notification_dd">
+                                <ul class="notification_ul">
+                                    <li class="starbucks success">
+                                        <div class="notify_icon">
+                                            <span class="icon"></span>
+                                        </div>
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Đơn đặt coffee Starbucks.
+                                            </div>
+                                            <div class="sub_title">
+                                                Đang giao hàng, dự kiến còn 10 phút
+                                            </div>
+                                        </div>
+                                        <div class="notify_status">
+                                            <p>Sắp tới</p>
+                                        </div>
+                                    </li>
+                                    <li class="baskin_robbins failed">
+                                        <div class="notify_icon">
+                                            <span class="icon"></span>
+                                        </div>
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Giảm giá 100% khi mua tại shop Fboy Baskin ngay hôm nay
+                                            </div>
+                                            <div class="sub_title">
+                                                Độc quyền duy nhất 1000% sản phẩm là có thật và 20 bạn may mắn nhất sẽ được đi thăm sở thú hoa cải đỏ
+                                            </div>
+                                        </div>
+                                        <div class="notify_status">
+                                            <p>Đóng</p>
+                                        </div>
+                                    </li>
+                                    <li class="mcd success">
+                                        <div class="notify_icon">
+                                            <span class="icon"></span>
+                                        </div>
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Đơn mua sách trên MCD đang được chờ duyệt
+                                            </div>
+                                            <div class="sub_title">
+                                                MCD sẽ nhanh chóng thông báo cho bạn sớm nhất.
+                                            </div>
+                                        </div>
+                                        <div class="notify_status">
+                                            <p>Chờ duyệt</p>
+                                        </div>
+                                    </li>
+                                    <li class="pizzahut failed">
+                                        <div class="notify_icon">
+                                            <span class="icon"></span>
+                                        </div>
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Đơn hàng pizzahut chưa được thanh toán
+                                            </div>
+                                            <div class="sub_title">
+                                                Bạn cần thanh toán online để đặt hàng không tiếp xúc
+                                            </div>
+                                        </div>
+                                        <div class="notify_status">
+                                            <p>Failed</p>
+                                        </div>
+                                    </li>
+                                    <li class="kfc success">
+                                        <div class="notify_icon">
+                                            <span class="icon"></span>
+                                        </div>
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Đơn hàng gà chiên mắm KFC còn 2 phút tới nơi
+                                            </div>
+                                            <div class="sub_title">
+                                                Bạn chuẩn bị nhận hàng nhé
+                                            </div>
+                                        </div>
+                                        <div class="notify_status">
+                                            <p>Success</p>
+                                        </div>
+                                    </li>
+                                    <li class="show_all">
+                                        <p class="link">Show All Activities</p>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                        </div>
+                        <div class="profile">
+                            <div class="icon_wrap">
+                                <img src="./../img/profile_pic.png" alt="profile_pic">
+                                <span class="name">John Alex</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+        
+                            <div class="profile_dd">
+                                <ul class="profile_ul">
+                                    <li><a href="./profile.html">My Profile</a></li>
+                                    <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                                    <li><a href="./add_good.html">Thêm thông tin mặt hàng</a></li>
+                                    <li><a href="./confirm.html">Duyệt đơn</a></li>
+                                    <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
+                                    <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
+                                    <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
+                                    <li><a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a></li>
+                                    <li><a href="./login.html">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="popup">
+                    <div class="shadow"></div>
+                    <div class="inner_popup">
+                        <div class="notification_dd">
+                            <ul class="notification_ul">
+                                <li class="title">
+                                    <p>All Notifications</p>
+                                    <p class="close"><i class="fas fa-times" aria-hidden="true"></i></p>
+                                </li>
+                                <li class="starbucks success">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            Lorem, ipsum dolor.
+                                        </div>
+                                        <div class="sub_title">
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        <p>Success</p>
+                                    </div>
+                                </li>
+                                <li class="baskin_robbins failed">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            Lorem, ipsum dolor.
+                                        </div>
+                                        <div class="sub_title">
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        <p>Failed</p>
+                                    </div>
+                                </li>
+                                <li class="mcd success">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            Lorem, ipsum dolor.
+                                        </div>
+                                        <div class="sub_title">
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        <p>Success</p>
+                                    </div>
+                                </li>
+                                <li class="baskin_robbins failed">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            Lorem, ipsum dolor.
+                                        </div>
+                                        <div class="sub_title">
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        <p>Failed</p>
+                                    </div>
+                                </li>
+                                <li class="pizzahut failed">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            Lorem, ipsum dolor.
+                                        </div>
+                                        <div class="sub_title">
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        <p>Failed</p>
+                                    </div>
+                                </li>
+                                <li class="kfc success">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="notify_data">
+                                        <div class="title">
+                                            Lorem, ipsum dolor.
+                                        </div>
+                                        <div class="sub_title">
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </div>
+                                    </div>
+                                    <div class="notify_status">
+                                        <p>Success</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+            <!-- </div> -->
+        </div>
+
+
+    </div>
 	<div class="container" >
 		<div class="page-breadcrumb">
     <div class="row">
