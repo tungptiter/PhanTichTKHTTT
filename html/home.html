@@ -543,7 +543,28 @@
 			<span style="margin-left: 950px">&diams; Cơ hội có một không hai mua mì tôm rinh ngay chai nước xả</span>
 		</marquee>
 
-		
+		<div class="pop_up_order">
+			<div class="content">
+				<div class="name">
+					Thùng mì tôm hảo hảo (30 gói)
+				</div>
+				<div class="quantity">
+					<span style="padding-right: 20px;">Số lượng:</span>
+					<div class="icon">
+						-
+					</div>
+					<div class="value">1</div>
+					<div class="icon">
+						+
+					</div>
+				</div>
+				<div class="option">
+					<button class="btn btn-danger" onclick="back()">Quay lại</button>
+					
+					<button class="btn btn-primary" style="margin-left: 10px" onclick="success()">Thêm vào giỏ hàng</button>
+				</div>
+			</div>
+		</div>
 
 		<div class="list">
 			<div class="line_items" style="margin-top: 0px;">
@@ -572,7 +593,7 @@
 							<div class="price">
 								110.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -588,7 +609,7 @@
 							<div class="price">
 								100.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -604,7 +625,7 @@
 							<div class="price">
 								130.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -620,7 +641,7 @@
 							<div class="price">
 								90.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -653,7 +674,7 @@
 							<div class="price">
 								80.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -669,7 +690,7 @@
 							<div class="price">
 								80.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -685,7 +706,7 @@
 							<div class="price">
 								79.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -701,7 +722,7 @@
 							<div class="price">
 								43.500 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -734,7 +755,7 @@
 							<div class="price">
 								35.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -750,7 +771,7 @@
 							<div class="price">
 								35.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -766,7 +787,7 @@
 							<div class="price">
 								85.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -782,7 +803,7 @@
 							<div class="price">
 								18.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -815,7 +836,7 @@
 							<div class="price">
 								47.000 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -831,7 +852,7 @@
 							<div class="price">
 								55.500 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -847,7 +868,7 @@
 							<div class="price">
 								10.500 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -863,7 +884,7 @@
 							<div class="price">
 								64.500 đ
 							</div>
-							<button class="button_to_cart">
+							<button class="button_to_cart" onclick="add_to_cart()">
 								Thêm sản phẩm
 							</button>
 						</div>
@@ -882,4 +903,19 @@
 </body>
 <script type="text/javascript" src="./../js/base.js"></script>
 <script type="text/javascript" src="./../js/home.js"></script>
+<script type="text/javascript">
+	function add_to_cart() {
+
+		document.querySelector('.pop_up_order').style.display = 'flex';
+	}
+	function back() {
+
+		document.querySelector('.pop_up_order').style.display = 'none';
+	}
+	function success() {
+
+		document.querySelector('.pop_up_order').style.display = 'none';
+		alert("Thêm vào giỏ hàng thành công");
+	}
+</script>
 </html>

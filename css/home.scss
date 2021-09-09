@@ -254,7 +254,53 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba(1,1,1,0.7);
   z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    
+    height: 200px;
+    background-color: white;
+    border-radius: 2px;
+    padding: 20px;
+
+    .name {
+      font-size: 200%;
+    }
+
+    .option {
+
+      margin-top: 20px;
+    }
+
+    .quantity {
+
+      display: flex;
+      margin-top: 15px;
+
+          .icon {
+
+            width: 30px;
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;              
+              font-size: 20px;
+              padding-bottom: 10px;
+              border: 1px solid #c4c4c4;
+          }
+
+          .value {
+            width: 40px;
+            border-top: 1px solid #c4c4c4;
+            border-bottom: 1px solid #c4c4c4;
+            display: flex;
+            justify-content: center;
+            height: 30px;
+          } 
+    }
+  }
 }
