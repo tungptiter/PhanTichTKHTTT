@@ -1,3 +1,4 @@
+$red: #db1818;
 
 /*# sourceMappingURL=base.css.map */
 body {
@@ -9,6 +10,7 @@ body {
   padding-bottom: 100px;
   width: 950px;
   margin-left: calc((100% - 950px)/2 + 125px);
+  position: relative  ;
 }
 
 .home_notfication {
@@ -190,7 +192,7 @@ body {
   background-color: white;
   position: absolute;
   top: 140px;
-  left: 9%;
+  left: -270px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 4px rgb(0 0 0 / 20%);
@@ -209,6 +211,8 @@ body {
 
     padding: 10px 25px;
     position: relative;
+    border-left: 1px solid rgba(0,0,0,.12);
+    border-right: 1px solid rgba(0,0,0,.12);
 
     .sub_bar {
       background-color: white;
@@ -302,45 +306,5 @@ body {
             height: 30px;
           } 
     }
-  }
-}
-
-@media only screen and (max-width: 1480px) {
-  /* For desktop: */
-  .menu_bar {
-
-    left: 7%;
-  }
-}
-
-@media only screen and (max-width: 1420px) {
-  /* For desktop: */
-  .menu_bar {
-
-    left: 6%;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  /* For desktop: */
-  .menu_bar {
-
-    left: 5%;
-  }
-}
-
-@media only screen and (max-width: 1340px) {
-  /* For desktop: */
-  .menu_bar {
-
-    left: 4%;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  /* For desktop: */
-  .menu_bar {
-
-    left: 3%;
   }
 }

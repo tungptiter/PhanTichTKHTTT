@@ -1,7 +1,6 @@
 .container {
 
     padding-top:  120px;
-    padding-bottom: 350px;
 }
 
 .bill{
@@ -50,7 +49,7 @@
 /* nhân viên duyệt đơn, xuất kho */
 #tieuDe{
     background-color: rgb(246, 246, 250);
-    padding-top: 100px;
+    min-height: calc(100vh - 150px);
 }
 
 .fa-hotel{
@@ -58,7 +57,6 @@
     color: #0d6efd;
 }
 #hoaDon{
-    margin-top: 120px;
     margin-bottom: 20px;
     padding: 0.5cm 1cm;
     border: 1px rgb(0, 60, 255) solid;

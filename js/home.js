@@ -13,3 +13,11 @@ document.querySelectorAll('.item').forEach(item => {
 		this.querySelector('.sub_bar').style.display = 'flex';
 	})
 })
+
+document.querySelectorAll('.home_box .list .item').forEach(item => {
+
+	item.addEventListener('click', function(evt) {
+
+		window.location.href = './infor.html';
+	})
+})
