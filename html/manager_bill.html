@@ -7,8 +7,12 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
-  <link rel="stylesheet" href="./../css/manager_bill.css" />
-  <link rel="stylesheet" href="./../css/add_good.css" />
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -22,6 +26,7 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
   <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -171,32 +176,18 @@
 
               <div class="profile_dd">
                 <ul class="profile_ul">
-                  <li><a href="./profile.html">My Profile</a></li>
+                  <li><a href="./profile.html">Tài khoản của tôi</a></li>
                   <li><a href="./order_status.html">Đơn mua</a></li>
-<li><a href="./manage_supply.html">Quản lý nhà cung cấp</a></li>
-<li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
-<li><a href="./manage_client.html">Quản lý khách hàng</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
-                  <li><a href="./add_good.html">Thêm thông tin mặt hàng</a></li>
-                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
-                  <li>
-                    <a href="./statistic_goods.html"
-                      >Thống kê mặt hàng theo doanh thu</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./statistic_guest.html"
-                      >Thống kê khách hàng theo doanh thu</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./statistic_supply.html"
-                      >Thống kê nhà cung cấp theo lượng mặt hàng nhập</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a>
-                  </li>
+                  <li><a href="./manage_supply.html">Quản lý nhà cung cấp</a></li>
+                  <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
+                  <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
+                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                            
+                  <li><a href="./add_good.html">Quản lý mặt hàng</a></li>
+                  <li><a href="./supply.html">Nhập hàng hóa</a></li>                          
+                  <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
+                  <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
+                  <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
+                  <li><a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a></li>
                   <li><a href="./login.html">Đăng xuất</a></li>
                 </ul>
               </div>
@@ -307,116 +298,26 @@
         <!-- </div> -->
       </div>
     </div>
-    <div class="container">
-      <div class="bill">
-        <div class="col-12">
-          <div class="row text-header text-primary">
-            <div class="col-12 d-flex justify-content-center">
-              <h3>Thông tin hóa đơn</h3>
-            </div>
-            <div
-              class="col-12 d-flex justify-content-end"
-              style="font-size: 15px; padding-right: 2.8cm"
-            >
-              <span class="me-3">chọn hóa đơn theo ngày đã mua hàng</span>
-              <select id="chonNgay" onclick="chonNgay()">
-                <option value=""></option>
-                <option value="">1/1/2022</option>
-                <option value="">2/3/4322</option>
-              </select>
-            </div>
+    <div class="container" style="padding-top: 120px">
+      <div class="page-breadcrumb">
+          <div class="row">
+              <div class="col-7 align-self-center">
+                  <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tra cứu thông tin hóa đơn</h4>
+                  <div class="d-flex align-items-center">
+                      <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb m-0 p-0">
+                              <li class="breadcrumb-item"><a href="https://google.com" class="text-muted" style="">Trang chủ</a>
+                              </li>
+                              <li class="breadcrumb-item text-muted active" aria-current="page"><a style="color: #3187F1FF">Tra cứu thông tin hóa đơn</a></li>
+                          </ol>
+                      </nav>
+                  </div>
+              </div>
           </div>
-          <div class="row text-body">
-            <div class="col-6 text-body-left">
-              <div class="text-body-item">
-                <span>Khách hàng:</span>
-              </div>
-              <div class="text-body-item">
-                <span>Số điện thoại:</span>
-              </div>
-              <div class="text-body-item">
-                <span>Địa chỉ:</span>
-              </div>
-            </div>
-            <div class="col-6 text-body-right">
-              <div class="text-body-item" id="ngayMua">Ngày mua</div>
-              <div class="text-body-item">
-                Trạng thái: đã xuất/hoàn thành/bị hủy
-              </div>
-            </div>
-          </div>
-          <!-- bảng thông tin các sản phẩm đã mua -->
-          <div class="row text-bill">
-            <table class="table">
-              <thead class="table-title">
-                <tr>
-                  <th>ID</th>
-                  <th>Sản phẩm</th>
-                  <th>Số lượng</th>
-                  <th>Đơn giá</th>
-                  <th>Tổng</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>abc</td>
-                  <td id="soLuong">2</td>
-                  <td id="donGia">3000</td>
-                  <td id="tong">6000</td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>abc</td>
-                  <td id="soLuong">2</td>
-                  <td id="donGia">3000</td>
-                  <td id="tong">6000</td>
-                </tr>
-                <tr>
-                  <td scope="row">3</td>
-                  <td>abc</td>
-                  <td id="soLuong">2</td>
-                  <td id="donGia">6000</td>
-                  <td id="tong">12000</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="row">
-              <div class="col-9"></div>
-              <div class="col-3">
-                <div class="mt-2" id="thanhTien">
-                  <strong>Thành tiền:</strong>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-9"></div>
-              <div class="col-3">
-                <div class="mt-2" id="thanhTien">
-                  <i style="font-size: 13px"
-                    >(đã thanh toán/thanh toán khi nhận hàng)</i
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- footer -->
-          <div
-            class="row text-footer"
-            style="
-              margin: 0.8cm 0cm;
-              border-top: rgb(191, 197, 252) solid 1px;
-              padding: 5mm 1cm;
-            "
-          >
-            <div class="col-9" style="padding-left: 2cm; color: #4187f0">
-              cảm ơn quý khách!
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+      <hr>
+  </div>
   </body>
   <script type="text/javascript" src="./../js/base.js"></script>
-  <script src="./../js/manager_bill.js"></script>
+  <script src="./../js/confirm.js"></script>
 </html>
