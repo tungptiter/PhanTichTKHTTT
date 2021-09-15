@@ -318,30 +318,29 @@
               class="col-12 d-flex justify-content-end"
               style="font-size: 15px; padding-right: 2.8cm"
             >
-              <span class="me-3">chọn hóa đơn theo ngày đã mua hàng</span>
-              <select id="chonNgay" onclick="chonNgay()">
-                <option value=""></option>
-                <option value="">1/1/2022</option>
-                <option value="">2/3/4322</option>
-              </select>
+              <span class="me-3">Ngày xuất hóa đơn: 22-07-2021</span>
             </div>
           </div>
           <div class="row text-body">
             <div class="col-6 text-body-left">
+              <div class="text-body-item">
+                <span>Mã hóa đơn:</span>
+              </div>
               <div class="text-body-item">
                 <span>Khách hàng:</span>
               </div>
               <div class="text-body-item">
                 <span>Số điện thoại:</span>
               </div>
-              <div class="text-body-item">
-                <span>Địa chỉ:</span>
-              </div>
+              
             </div>
             <div class="col-6 text-body-right">
               <div class="text-body-item" id="ngayMua">Ngày mua</div>
               <div class="text-body-item">
                 Trạng thái: đã xuất/hoàn thành/bị hủy
+              </div>
+              <div class="text-body-item">
+                <span>Địa chỉ:</span>
               </div>
             </div>
           </div>
@@ -382,7 +381,11 @@
               </tbody>
             </table>
             <div class="row">
-              <div class="col-9"></div>
+              <div class="col-3">
+                <div  class="mt-2">
+                  <strong>Nhân viên duyệt đơn</strong></div>
+                </div>
+              <div class="col-6"></div>
               <div class="col-3">
                 <div class="mt-2" id="thanhTien">
                   <strong>Thành tiền:</strong>
