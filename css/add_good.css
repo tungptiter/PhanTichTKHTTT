@@ -5,5 +5,10 @@
 
 
 a{
-	color: #7f8db0;
+	color: #7f8db0 !important;
+ }
+
+ a:hover {
+
+ 	color: #0d6efd !important;
  }

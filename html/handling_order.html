@@ -7,7 +7,13 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
-  <link rel="stylesheet" type="text/css" href="./../css/cart.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/handling_order.css" />
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -304,136 +310,145 @@
         <!-- </div> -->
       </div>
     </div>
-    <div class="cart_box">
-      <div class="infor">
-        <div class="content">
-          <div class="col-12">
-            <div class="row"></div>
+    <div class="container">
+      <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-7 align-self-center">
+                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Thông tin đơn hàng</h4>
+                    <div class="d-flex align-items-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 p-0">
+                                <li class="breadcrumb-item"><a href="home.html" class="text-muted">Trang chủ</a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="./confirm.html">Quản lý đơn hàng</a></li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page">Thông tin đơn hàng</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <hr>
+      <div class="content">
+        <div class="test">
+          
+          <div class="client_infor">
+            <div class="title"><h4>Thông tin khách hàng</h4></div>
+            <table class="form">
+              <tr class="item">
+                <td class="label">Tên đăng nhập:</td>
+                <td class="value">TùngNT</td>
+              </tr>
+              <tr class="item">
+                <td class="label">Tên khách hàng</td>
+                <td class="value">Nguyễn Bảo Trung</td>
+              </tr>
+              <tr class="item">
+                <td class="label">Người nhận:</td>
+                <td class="value">Nguyễn Thanh Tùng</td>
+              </tr>
+              <tr class="item">
+                <td class="label">Số điện thoại:</td>
+                <td class="value">0356540684</td>
+              </tr>              
+            </table>        
+          </div>          
+          <div class="received_infor">
+            <div class="title" style="opacity: 0">Thông tin người nhận</div>
+            <table class="form">                                       
+              <tr class="item">
+                <td class="label">Địa chỉ:</td>
+                <td class="value">Nhà số 5 ngõ 24</td>
+              </tr>
+              <tr class="item">
+                <td class="label">Tỉnh/Thành phố:</td>
+                <td class="value">Hà Nội</td>
+              </tr>
+              <tr class="item">
+                <td class="label">Quận/Huyện:</td>
+                <td class="value">Hoàn Kiếm</td>
+              </tr>              
+            </table>
           </div>
-          <form>
-            <h1 class="h3 mb-3 fw-normal" style="text-align: center">
-              Thông tin đơn hàng
-            </h1>
-            <!-- thông tin khách hàng -->
-            <div class="mt-3">
-              <label for=""><strong>Họ và tên:</strong></label>
-              <input type="text" id="hovaten" class="form-control" />
-            </div>
-            <div class="mt-3">
-              <label for=""><strong>Số điện thoại:</strong></label>
-              <input type="text" id="sodienthoai" class="form-control" />
-            </div>
-            <div class="mt-3">
-              <label for=""><strong>Địa chỉ:</strong></label>
-              <input type="text" id="diachi" class="form-control" />
-            </div>
-            <!-- chọn tỉnh thành huyện -->
-            <div class="mt-3 row">
-              <div class="col">
-                <select class="form-select" name="chonTinh">
-                  <option value="">Tỉnh / Thành phố</option>
-                </select>
-              </div>
-              <div class="col">
-                <select class="form-select" name="chonHuyen">
-                  <option value="">Quận / Huyện</option>
-                </select>
-              </div>
-            </div>
-            <!-- chọn phương thức thanh toán -->
-            <div class="mt-4 mt-3 mb-2">
-              <strong>Phương thức thanh toán</strong>
-            </div>
-            <div class="form-check">
-              <div class="">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label">
-                  Thanh toán khi nhận hàng
-                </label>
-              </div>
-              <div class="">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  checked
-                />
-                <label class="form-check-label"> Thanh toán ngay </label>
-              </div>
-            </div>
-            <div class="mt-3 row justify-content-around">
-              <div class="col-9"></div>
-              <button
-                type="button"
-                class="btn btn-primary col-2"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                id="xacnhan"
-                onclick="checkFillForm()"
-              >
-                Xác nhận
-              </button>
-            </div>
-          </form>
 
-          <!-- hộp thông báo -->
-          <div class="modal fade" id="exampleModal" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content" id="checkform"></div>
-            </div>
-          </div>
+        </div>   
+        <div class="cart">
+          <div class="title"><h4>Đơn hàng</h4></div>
+          <table class="form">
+            <tr class="item">
+              <td class="label">Mã đơn hàng:</td>
+              <td class="value">1463972135465325</td>
+            </tr>
+            <tr class="item">
+              <td class="label">Ngày đặt hàng:</td>
+              <td class="value">12-09-2021</td>
+            </tr>
+          </table>
+          <table class="form_cart mt-3">
+            <tbody class="border border-secondary">
+              <tr class="item header">
+                <td class="single_value">STT</td>
+                <td class="single_value">Tên sản phẩm</td>
+                <td class="single_value">Số lượng</td>
+                <td class="single_value">Giá tiền</td>
+              </tr>
+              <tr class="item">
+                <td class="single_value stt">1</td>
+                <td class="single_value">6 chai nước ngọt coca cola 600ml</td>
+                <td class="single_value">x3</td>
+                <td class="single_value">300.000đ</td>
+              </tr>
+              <tr class="item">
+                <td class="single_value stt">2</td>
+                <td class="single_value">Sườn cốt lết heo HP khay 500g</td>
+                <td class="single_value">x2</td>
+                <td class="single_value">160.000đ</td>
+              </tr>
+              <tr class="item">
+                <td class="single_value stt"></td>
+                <td class="single_value"></td>
+                <td class="single_value">Tổng</td>
+                <td class="single_value">460.000đ</td>
+              </tr>
+            </tbody>            
+          </table>
         </div>
-      </div>
-      <div class="cart">
-        <div class="cart_items">
-          <div class="item">
-            <div class="product">
-              <div class="img">
-                <img
-                  src="./../img/6-chai-nuoc-ngot-coca-cola-600ml-202103312238301818_300x300.jpg"
-                />
-              </div>
-              <div class="description">6 chai nước ngọt coca cola 600ml</div>
-            </div>
-            <div class="price">60.000đ</div>
-            <div class="quantity">
-              <div class="icon">-</div>
-              <div class="value">3</div>
-              <div class="icon">+</div>
-            </div>
-            <div class="remove">Xóa</div>
-          </div>
-          <div class="item">
-            <div class="product">
-              <div class="img">
-                <img src="./../img/tien_vua.jpg" />
-              </div>
-              <div class="description">Thùng mì tiến vua (30 gói)</div>
-            </div>
-            <div class="price">20.000đ</div>
-            <div class="quantity">
-              <div class="icon">-</div>
-              <div class="value">1</div>
-              <div class="icon">+</div>
-            </div>
-            <div class="remove">Xóa</div>
-          </div>
+        <div class="pttt">          
+          <div class="title"><h4>Phương thức thanh toán</h4></div>
+          <table class="form">
+            <tr class="item">
+              <td class="value">Thanh toán khi nhận hàng</td>
+            </tr>
+          </table>
         </div>
-        <div class="total">
-          <hr />
-          Tổng cộng: 200.000đ
+        <div>          
+          <div class="title"><h4>Nhân viên duyệt đơn</h4></div>
+          <table class="form">
+            <tr class="item">
+              <td class="label">Mã nhân viên:</td>
+              <td class="value">005</td>
+            </tr>
+            <tr class="item">
+              <td class="label">Họ và tên:</td>
+              <td class="value">Nguyễn Thu Ngân</td>
+            </tr>
+          </table>
+          <textarea
+            style="width: 40%; min-width: 400px"
+            class="area form-control form"
+            name="txtContent"
+            rows="4"
+            maxlength="1000"
+            placeholder="Lý do hủy đơn hàng (nếu có)"
+            spellcheck="false"
+          ></textarea>
+          <div class="pt-3" style="margin-left: 25px">
+            <button class="btn btn-secondary">Hủy đơn</button>
+            <a href="./bill.html"><button class="btn btn-primary" style="margin-left: 10px">Xuất kho</button></a>
+          </div>
         </div>
       </div>
     </div>
   </body>
   <script type="text/javascript" src="./../js/base.js"></script>
-  <script type="text/javascript">
-    function checkFillForm() {
-      alert("Đặt hàng thành công");
-    }
-  </script>
+  <script src="./../js/confirm.js"></script>
 </html>

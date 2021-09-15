@@ -162,12 +162,11 @@
         
                             <div class="profile_dd">
                                 <ul class="profile_ul">
-                                    <li><a href="./profile.html">My Profile</a></li>
-                                    <li><a href="./order_status.html">Đơn mua</a></li>
+                                    <li><a href="./profile.html">Tài khoản của tôi</a></li>
                                     <li><a href="./order_status.html">Đơn mua</a></li>
                                     <li><a href="./supply.html">Nhập hàng hóa</a></li>
                                     <li><a href="./add_good.html">Thêm thông tin mặt hàng</a></li>
-                                    <li><a href="./confirm.html">Duyệt đơn</a></li>
+                                    <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
                                     <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
                                     <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
                                     <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
@@ -294,157 +293,129 @@
 
 
     </div>
-	<div class="container" id="confirm-form">
-        <div class="col-12">
-            <div id="tieuDe">
-                <div class="col-12 d-flex justify-content-center" style="padding-top: 5mm;">
-                    <h4 class="text-primary">Đơn hàng đang chờ được duyệt</h4>
-                </div>
-                <div class="row" style="margin: 0.5cm 4cm;">
-                    <table class="table">
-                        <thead>
-                            <tr style="background-color: rgb(211, 211, 223);">
-                                <th scope="col">Mã hóa đơn</th>
-                                <th scope="col">Tên khách hàng</th>
-                                <th scope="col">Thời gian mua</th>
-                                <th scope="col">Chi tiết</th>
-                            </tr>
-                        </thead>
-<!-- thông tin chung tất cả hóa đơn chưa duyệt -->
-                        <tbody>
-                            <tr>
-                                <th scope="row">1fr</th>
-                                <td>Mark</td>
-                                <td>1/1/1122</td>
-                                <td><a role="button" id="xemthem" onclick="xemThem()">xem thêm</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ffr2</th>
-                                <td>Jacob</td>
-                                <td>2/2/2222</td>
-                                <td><a role="button" id="xemthem" onclick="xemThem()">xem thêm</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">34553</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td><a role="button" id="xemthem" onclick="xemThem()">xem thêm</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-<!-- hiện chi tiết hóa đơn -->
+    
+    <div class="container">
+        <div class="page-breadcrumb">
             <div class="row">
-                <div class="col-2"></div>
-                <div id="hoaDon" class="col-8">
-                    <div id="quayLai" role="button" style="margin-bottom: 1cm; border-bottom: blue solid 1px;"
-                        onclick="quayLai()">
-                        <i class="fas fa-arrow-left" style="color: blue;"></i>
-                        <span style="color: blue;">quay lại</span>
-                    </div>
-                    <h4 class="d-flex justify-content-center"
-                        style="color: blue; font-family: 'Times New Roman', Times, serif;">
-                        <strong>Shopping Funny</strong>
-                    </h4>
-                    <div class="">
-                        <div class="row mt-3">
-                            <div class="col-6">
-                                <div class="thongTinKH">
-                                    <i class="fas fa-circle"></i>
-                                    <span>Khách hàng:</span>
-                                </div>
-                                <div class="thongTinKH">
-                                    <i class="fas fa-circle"></i>
-                                    <span>Số điện thoại:</span>
-                                </div>
-                                <div class="thongTinKH">
-                                    <i class="fas fa-circle"></i>
-                                    <span>Địa chỉ:</span>
-                                </div>
-                                <div class="thongTinKH">
-                                    <i class="fas fa-circle"></i>
-                                    <span>Ngày mua:</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="row"><i class="fas fa-hotel d-flex justify-content-center"></i></div>
-                                <div class="row d-flex justify-content-center text-primary"
-                                    style="font-weight: bold; margin-top: 5px;">
-                                    Km10-Nguyễn Trãi
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <table class="table">
-                                <thead class="table-title">
-                                    <tr>
-                                        <th>STT</th>
-                                        <th>Sản phẩm</th>
-                                        <th>Số lượng</th>
-                                        <th>Đơn giá</th>
-                                        <th>Tổng</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td scope="row">1</td>
-                                        <td>abc</td>
-                                        <td id="soLuong">2</td>
-                                        <td id="donGia">3000</td>
-                                        <td id="tong">6000</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row">2</td>
-                                        <td>abc</td>
-                                        <td id="soLuong">2</td>
-                                        <td id="donGia">3000</td>
-                                        <td id="tong">6000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col align-self-start" style="color: rgb(0, 0, 255); font-size: 14px;">
-                            Cảm ơn đã mua sản phẩm!
-                        </div>
-                        <div class="col"></div>
-                        <div class="col align-self-end" style="float: right;">
-                            <strong>Thành tiền: 120000 (đồng)</strong>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                        </div>
-                        <div class="col"></div>
-                        <div class="col align-self-end" style="float: right;">
-                            <i style="font-size: 13px;">(thanh toán khi nhận hàng/đã thanh toán)</i>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 5mm; border-top: blue solid 1px; padding:6mm 0mm 0mm 0mm;"
-                        class="d-flex justify-content-around">
-                        <div>
-                            <label>chọn NV giao hàng</label>
-                            <select id="chonNV" onclick="chonNV()" style="width: fit-content;">
-                                <option></option>
-                                <option>Nguyễn Nguyễn</option>
-                                <option>xyz</option>
-                            </select>
-                        </div>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" id="duyetDon" class="btn btn-warning" onclick="chonDuyetDon()">Duyệt
-                                đơn</button>
-                            <button type="button" id="in" class="btn btn-primary" onclick="chonIn()">In hóa đơn</button>
-                        </div>
+                <div class="col-7 align-self-center">
+                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Quản lý đơn hàng</h4>
+                    <div class="d-flex align-items-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 p-0">
+                                <li class="breadcrumb-item"><a href="./home.html" class="text-muted">Trang chủ</a></li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page">Quản lý đơn hàng</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
-                <div class="col-2"></div>
             </div>
+        </div>
+        <hr>
 
-            <!-- hóa đơn 2 -->
-            
+        <div class="page-breadcrumb">
+            <div class="row form-group">                
+                <div class="col-lg-3">
+                    <div>
+                        <label>Từ ngày</label>
+                    </div>
+                    <div class="customize-input">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <label>Đến ngày</label>
+                    </div>
+                    <div class="customize-input">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div>
+                        <label>Trạng thái</label>
+                    </div>
+                    <select class="form-select" aria-label="Default select example">
+                      <option value="1">Tất cả</option>
+                      <option value="2">Chưa duyệt</option>
+                      <option value="3">Đã xuất</option>
+                      <option value="3">Hoàn Thành</option>
+                      <option value="3">Bị hủy</option>
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <div class="pt-4">
+                        <button type="button" class="btn btn-primary" id="btn-search">
+                            Thống kê
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row page-breadcrumb pt-2 pb-3" style="margin-left: 0.2%;">
+            <div class="col-lg-3">                
+                <div class="customize-input">
+                    <input type="text" class="form-control" placeholder="Nhập mã đơn hàng ..." />
+                </div>                
+            </div>
+            <div class="col-lg-3">
+                <button type="button" class="btn btn-primary" id="btn-search">
+                    Tìm kiếm
+                </button>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-hover table-bordered mb-0">
+                <thead class="bg-primary text-white">
+                <tr>
+                    <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Tên khách hàng</th>
+                    <th scope="col">Thời gian mua</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col">Chi tiết</th>
+                </tr>
+                </thead>
+                <tbody class="border border-secondary" id="tbl">
+                <tr>
+                    <td>1463972135</td>
+                    <td>Đinh Ngọc Đức</td>                    
+                    <td>11-10-2000</td>
+                    <td>Chưa duyệt</td>
+                    <td><a href="./handling_order.html">Xem thêm</a></td>
+                </tr>
+                <tr>
+                    <td>1593972135</td>
+                    <td>Nguyễn Thanh Tùng</td>                    
+                    <td>28-12-2000</td>
+                    <td>Đã xuất</td>
+                    <td><a href="./handling_order.html">Xem thêm</a></td>
+                </tr>
+                <tr>
+                    <td>12539721945</td>
+                    <td>Nguyễn Bảo Trung</td>                    
+                    <td>1-6-2000</td>
+                    <td>Hoàn Thành</td>
+                    <td><a href="./handling_order.html">Xem thêm</a></td>
+                </tr>
+                <tr>
+                    <td>10039721965</td>
+                    <td>Phan Văn Thìn</td>                    
+                    <td>8-3-2000</td>
+                    <td>Bị hủy</td>
+                    <td><a href="./handling_order.html">Xem thêm</a></td>
+                </tr>
+                <tr>
+                    <td>15539721658</td>
+                    <td>Nguyễn Hữu Mừng</td>                    
+                    <td>20-10-2000</td>
+                    <td>Hoàn Thành</td>
+                    <td><a href="./handling_order.html">Xem thêm</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
         </div>
     </div>
 </body>

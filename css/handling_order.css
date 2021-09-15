@@ -1,0 +1,58 @@
+.container {
+  padding-top: 120px;
+}
+.container .content {
+  padding-bottom: 25px;
+  font-size: 110%;
+}
+.container .content .title {
+  margin-top: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border-left: 5px solid #395db4;
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
+.container .content .title h4 {
+  margin-bottom: 0;
+}
+.container .content .form {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.container .content .form .item .label {
+  font-weight: 500;
+  min-width: 150px;
+  padding: 2.5px 0px;
+}
+.container .content .form .item .single_value {
+  border: 1px solid #dddddd;
+}
+.container .content .form .item .single_value:nth-child(2) {
+  text-align: center;
+}
+.container .content .form_cart {
+  margin-left: 25px;
+  width: 60%;
+  border-collapse: collapse;
+}
+.container .content .form_cart th, .container .content .form_cart td {
+  text-align: center;
+}
+.container .content .form_cart .item.header {
+  font-weight: 500;
+}
+.container .content .form_cart .item .single_value {
+  border: 1px solid #dddddd;
+}
+.container .content .form_cart .item .single_value:nth-child(2) {
+  text-align: center;
+}
+.container .content .test {
+  display: flex;
+  justify-content: flex-start;
+  gap: 150px;
+}
+
+/*# sourceMappingURL=handling_order.css.map */

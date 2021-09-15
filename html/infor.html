@@ -1,648 +1,601 @@
 <!DOCTYPE html>
 <html>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="./../css/base.css">
-<link rel="stylesheet" type="text/css" href="./../css/infor.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" type="text/css" href="./../css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/infor.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
+  <!-- notification and profile -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" type="text/css" href="./../css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
-<!-- notification and profile -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="./../css/base.css">
-<link rel="stylesheet" type="text/css" href="./../css/add_good.css">
-<!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
-
-<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
     $(document).ready(function () {
-        $(".profile .icon_wrap").click(function () {
-            $(this).parent().toggleClass("active");
-            $(".notifications").removeClass("active");
-        });
+      $(".profile .icon_wrap").click(function () {
+        $(this).parent().toggleClass("active");
+        $(".notifications").removeClass("active");
+      });
 
-        $(".notifications .icon_wrap").click(function () {
-            $(this).parent().toggleClass("active");
-            $(".profile").removeClass("active");
-        });
+      $(".notifications .icon_wrap").click(function () {
+        $(this).parent().toggleClass("active");
+        $(".profile").removeClass("active");
+      });
 
-        $(".show_all .link").click(function () {
-            $(".notifications").removeClass("active");
-            $(".popup").show();
-        });
+      $(".show_all .link").click(function () {
+        $(".notifications").removeClass("active");
+        $(".popup").show();
+      });
 
-        $(".close").click(function () {
-            $(".popup").hide();
-        });
+      $(".close").click(function () {
+        $(".popup").hide();
+      });
     });
-</script>
+  </script>
 
-<!--  end of notification and profile -->
+  <!--  end of notification and profile -->
 
+  <head>
+    <meta charset="utf-8" />
+    <title>Shopping Funny</title>
+  </head>
+  <body>
+    <div class="header_box">
+      <div class="header_logo">
+        <a href="./home.html"><img src="./../img/icon_logo.png" /></a>
+      </div>
+      <div class="header_search_bar">
+        <input
+          type="text"
+          name="header_search_bar_input"
+          placeholder="Tìm kiếm ..."
+        />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="header_auth">
+        <!-- <div class="wrapper"> -->
+        <div class="navbar" style="background-color: inherit">
+          <div class="navbar_right">
+            <div class="cart">
+              <a href="./cart.html">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+            <div class="notifications">
+              <div class="icon_wrap"><i class="far fa-bell"></i></div>
 
-<head>
-	<meta charset="utf-8">
-	<title>Shopping Funny</title>
-</head>
-<body>
-	<div class="header_box">
-		<div class="header_logo">
-			<a href="./home.html"><img src="./../img/icon_logo.png"></a>
-		</div>
-		<div class="header_search_bar">
-			<input type="text" name="header_search_bar_input" placeholder="Tìm kiếm ...">
-			<i class="fas fa-search"></i>			
-		</div>
-		<div class="header_auth">
-			<!-- <div class="wrapper"> -->
-				<div class="navbar" style="background-color: inherit;">
+              <div class="notification_dd">
+                <ul class="notification_ul">
+                  <li class="starbucks success">
+                    <div class="notify_icon">
+                      <span class="icon"></span>
+                    </div>
+                    <div class="notify_data">
+                      <div class="title">Đơn đặt coffee Starbucks.</div>
+                      <div class="sub_title">
+                        Đang giao hàng, dự kiến còn 10 phút
+                      </div>
+                    </div>
+                    <div class="notify_status">
+                      <p>Sắp tới</p>
+                    </div>
+                  </li>
+                  <li class="baskin_robbins failed">
+                    <div class="notify_icon">
+                      <span class="icon"></span>
+                    </div>
+                    <div class="notify_data">
+                      <div class="title">
+                        Giảm giá 100% khi mua tại shop Fboy Baskin ngay hôm nay
+                      </div>
+                      <div class="sub_title">
+                        Độc quyền duy nhất 1000% sản phẩm là có thật và 20 bạn
+                        may mắn nhất sẽ được đi thăm sở thú hoa cải đỏ
+                      </div>
+                    </div>
+                    <div class="notify_status">
+                      <p>Đóng</p>
+                    </div>
+                  </li>
+                  <li class="mcd success">
+                    <div class="notify_icon">
+                      <span class="icon"></span>
+                    </div>
+                    <div class="notify_data">
+                      <div class="title">
+                        Đơn mua sách trên MCD đang được chờ duyệt
+                      </div>
+                      <div class="sub_title">
+                        MCD sẽ nhanh chóng thông báo cho bạn sớm nhất.
+                      </div>
+                    </div>
+                    <div class="notify_status">
+                      <p>Chờ duyệt</p>
+                    </div>
+                  </li>
+                  <li class="pizzahut failed">
+                    <div class="notify_icon">
+                      <span class="icon"></span>
+                    </div>
+                    <div class="notify_data">
+                      <div class="title">
+                        Đơn hàng pizzahut chưa được thanh toán
+                      </div>
+                      <div class="sub_title">
+                        Bạn cần thanh toán online để đặt hàng không tiếp xúc
+                      </div>
+                    </div>
+                    <div class="notify_status">
+                      <p>Failed</p>
+                    </div>
+                  </li>
+                  <li class="kfc success">
+                    <div class="notify_icon">
+                      <span class="icon"></span>
+                    </div>
+                    <div class="notify_data">
+                      <div class="title">
+                        Đơn hàng gà chiên mắm KFC còn 2 phút tới nơi
+                      </div>
+                      <div class="sub_title">Bạn chuẩn bị nhận hàng nhé</div>
+                    </div>
+                    <div class="notify_status">
+                      <p>Success</p>
+                    </div>
+                  </li>
+                  <li class="show_all">
+                    <p class="link">Show All Activities</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="icon_wrap">
+                <img src="./../img/profile_pic.png" alt="profile_pic" />
+                <span class="name">John Alex</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
 
-					<div class="navbar_right">
-						<div class="cart">
-							<a href="./cart.html">
-								<i class="fas fa-shopping-cart"></i>
-							</a>
-						</div>
-						<div class="notifications">
-							<div class="icon_wrap"><i class="far fa-bell"></i></div>
-		
-							<div class="notification_dd">
-								<ul class="notification_ul">
-									<li class="starbucks success">
-										<div class="notify_icon">
-											<span class="icon"></span>
-										</div>
-										<div class="notify_data">
-											<div class="title">
-												Đơn đặt coffee Starbucks.
-											</div>
-											<div class="sub_title">
-												Đang giao hàng, dự kiến còn 10 phút
-											</div>
-										</div>
-										<div class="notify_status">
-											<p>Sắp tới</p>
-										</div>
-									</li>
-									<li class="baskin_robbins failed">
-										<div class="notify_icon">
-											<span class="icon"></span>
-										</div>
-										<div class="notify_data">
-											<div class="title">
-												Giảm giá 100% khi mua tại shop Fboy Baskin ngay hôm nay
-											</div>
-											<div class="sub_title">
-												Độc quyền duy nhất 1000% sản phẩm là có thật và 20 bạn may mắn nhất sẽ được đi thăm sở thú hoa cải đỏ
-											</div>
-										</div>
-										<div class="notify_status">
-											<p>Đóng</p>
-										</div>
-									</li>
-									<li class="mcd success">
-										<div class="notify_icon">
-											<span class="icon"></span>
-										</div>
-										<div class="notify_data">
-											<div class="title">
-												Đơn mua sách trên MCD đang được chờ duyệt
-											</div>
-											<div class="sub_title">
-												MCD sẽ nhanh chóng thông báo cho bạn sớm nhất.
-											</div>
-										</div>
-										<div class="notify_status">
-											<p>Chờ duyệt</p>
-										</div>
-									</li>
-									<li class="pizzahut failed">
-										<div class="notify_icon">
-											<span class="icon"></span>
-										</div>
-										<div class="notify_data">
-											<div class="title">
-												Đơn hàng pizzahut chưa được thanh toán
-											</div>
-											<div class="sub_title">
-												Bạn cần thanh toán online để đặt hàng không tiếp xúc
-											</div>
-										</div>
-										<div class="notify_status">
-											<p>Failed</p>
-										</div>
-									</li>
-									<li class="kfc success">
-										<div class="notify_icon">
-											<span class="icon"></span>
-										</div>
-										<div class="notify_data">
-											<div class="title">
-												Đơn hàng gà chiên mắm KFC còn 2 phút tới nơi
-											</div>
-											<div class="sub_title">
-												Bạn chuẩn bị nhận hàng nhé
-											</div>
-										</div>
-										<div class="notify_status">
-											<p>Success</p>
-										</div>
-									</li>
-									<li class="show_all">
-										<p class="link">Show All Activities</p>
-									</li>
-								</ul>
-							</div>
-		
-						</div>
-						<div class="profile">
-							<div class="icon_wrap">
-								<img src="./../img/profile_pic.png" alt="profile_pic">
-								<span class="name">John Alex</span>
-								<i class="fas fa-chevron-down"></i>
-							</div>
-		
-							<div class="profile_dd">
-								<ul class="profile_ul">
-									<li><a href="./profile.html">Tài khoản của tôi</a></li>
-									<li><a href="./order_status.html">Đơn mua</a></li>
-				                    <li><a href="./supply.html">Nhập hàng hóa</a></li>
-				                    <li><a href="./add_good.html">Thêm thông tin mặt hàng</a></li>
-				                    <li><a href="./confirm.html">Duyệt đơn</a></li>
-				                    <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
-				                    <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
-				                    <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
-				                    <li><a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a></li>
-				                    <li><a href="./login.html">Đăng xuất</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-		
-				<div class="popup">
-					<div class="shadow"></div>
-					<div class="inner_popup">
-						<div class="notification_dd">
-							<ul class="notification_ul">
-								<li class="title">
-									<p>All Notifications</p>
-									<p class="close"><i class="fas fa-times" aria-hidden="true"></i></p>
-								</li>
-								<li class="starbucks success">
-									<div class="notify_icon">
-										<span class="icon"></span>
-									</div>
-									<div class="notify_data">
-										<div class="title">
-											Lorem, ipsum dolor.
-										</div>
-										<div class="sub_title">
-											Lorem ipsum dolor sit amet consectetur.
-										</div>
-									</div>
-									<div class="notify_status">
-										<p>Success</p>
-									</div>
-								</li>
-								<li class="baskin_robbins failed">
-									<div class="notify_icon">
-										<span class="icon"></span>
-									</div>
-									<div class="notify_data">
-										<div class="title">
-											Lorem, ipsum dolor.
-										</div>
-										<div class="sub_title">
-											Lorem ipsum dolor sit amet consectetur.
-										</div>
-									</div>
-									<div class="notify_status">
-										<p>Failed</p>
-									</div>
-								</li>
-								<li class="mcd success">
-									<div class="notify_icon">
-										<span class="icon"></span>
-									</div>
-									<div class="notify_data">
-										<div class="title">
-											Lorem, ipsum dolor.
-										</div>
-										<div class="sub_title">
-											Lorem ipsum dolor sit amet consectetur.
-										</div>
-									</div>
-									<div class="notify_status">
-										<p>Success</p>
-									</div>
-								</li>
-								<li class="baskin_robbins failed">
-									<div class="notify_icon">
-										<span class="icon"></span>
-									</div>
-									<div class="notify_data">
-										<div class="title">
-											Lorem, ipsum dolor.
-										</div>
-										<div class="sub_title">
-											Lorem ipsum dolor sit amet consectetur.
-										</div>
-									</div>
-									<div class="notify_status">
-										<p>Failed</p>
-									</div>
-								</li>
-								<li class="pizzahut failed">
-									<div class="notify_icon">
-										<span class="icon"></span>
-									</div>
-									<div class="notify_data">
-										<div class="title">
-											Lorem, ipsum dolor.
-										</div>
-										<div class="sub_title">
-											Lorem ipsum dolor sit amet consectetur.
-										</div>
-									</div>
-									<div class="notify_status">
-										<p>Failed</p>
-									</div>
-								</li>
-								<li class="kfc success">
-									<div class="notify_icon">
-										<span class="icon"></span>
-									</div>
-									<div class="notify_data">
-										<div class="title">
-											Lorem, ipsum dolor.
-										</div>
-										<div class="sub_title">
-											Lorem ipsum dolor sit amet consectetur.
-										</div>
-									</div>
-									<div class="notify_status">
-										<p>Success</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-		
-			<!-- </div> -->
-		</div>
+              <div class="profile_dd">
+                <ul class="profile_ul">
+                  <li><a href="./profile.html">Tài khoản của tôi</a></li>
+                  <li><a href="./order_status.html">Đơn mua</a></li>
+                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li><a href="./add_good.html">Thêm thông tin mặt hàng</a></li>
+                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
+                  <li>
+                    <a href="./statistic_goods.html"
+                      >Thống kê mặt hàng theo doanh thu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./statistic_guest.html"
+                      >Thống kê khách hàng theo doanh thu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./statistic_supply.html"
+                      >Thống kê nhà cung cấp theo lượng mặt hàng nhập</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a>
+                  </li>
+                  <li><a href="./login.html">Đăng xuất</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="popup">
+          <div class="shadow"></div>
+          <div class="inner_popup">
+            <div class="notification_dd">
+              <ul class="notification_ul">
+                <li class="title">
+                  <p>All Notifications</p>
+                  <p class="close">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                  </p>
+                </li>
+                <li class="starbucks success">
+                  <div class="notify_icon">
+                    <span class="icon"></span>
+                  </div>
+                  <div class="notify_data">
+                    <div class="title">Lorem, ipsum dolor.</div>
+                    <div class="sub_title">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                  </div>
+                  <div class="notify_status">
+                    <p>Success</p>
+                  </div>
+                </li>
+                <li class="baskin_robbins failed">
+                  <div class="notify_icon">
+                    <span class="icon"></span>
+                  </div>
+                  <div class="notify_data">
+                    <div class="title">Lorem, ipsum dolor.</div>
+                    <div class="sub_title">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                  </div>
+                  <div class="notify_status">
+                    <p>Failed</p>
+                  </div>
+                </li>
+                <li class="mcd success">
+                  <div class="notify_icon">
+                    <span class="icon"></span>
+                  </div>
+                  <div class="notify_data">
+                    <div class="title">Lorem, ipsum dolor.</div>
+                    <div class="sub_title">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                  </div>
+                  <div class="notify_status">
+                    <p>Success</p>
+                  </div>
+                </li>
+                <li class="baskin_robbins failed">
+                  <div class="notify_icon">
+                    <span class="icon"></span>
+                  </div>
+                  <div class="notify_data">
+                    <div class="title">Lorem, ipsum dolor.</div>
+                    <div class="sub_title">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                  </div>
+                  <div class="notify_status">
+                    <p>Failed</p>
+                  </div>
+                </li>
+                <li class="pizzahut failed">
+                  <div class="notify_icon">
+                    <span class="icon"></span>
+                  </div>
+                  <div class="notify_data">
+                    <div class="title">Lorem, ipsum dolor.</div>
+                    <div class="sub_title">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                  </div>
+                  <div class="notify_status">
+                    <p>Failed</p>
+                  </div>
+                </li>
+                <li class="kfc success">
+                  <div class="notify_icon">
+                    <span class="icon"></span>
+                  </div>
+                  <div class="notify_data">
+                    <div class="title">Lorem, ipsum dolor.</div>
+                    <div class="sub_title">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                  </div>
+                  <div class="notify_status">
+                    <p>Success</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-	</div>	
+        <!-- </div> -->
+      </div>
+    </div>
 
-	<div class="infor_box">
+    <div class="infor_box">
+      <div class="menu_bar">
+        <div class="title">Danh mục sản phẩm</div>
+        <div class="item">
+          Sản phẩm ăn liền
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Mì ăn liền</div>
+            <div class="sub_item">Phở, hủ tiếu, miến</div>
+            <div class="sub_item">Cháo gói, cháo tươi</div>
+            <div class="sub_item">Bánh canh, bánh đa</div>
+            <div class="sub_item">Lương khô</div>
+          </div>
+        </div>
+        <div class="item">
+          Đồ tươi sống
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Thịt lợn</div>
+            <div class="sub_item">Gà, trứng</div>
+            <div class="sub_item">Rau củ sạch</div>
+            <div class="sub_item">Cá, hải sản</div>
+            <div class="sub_item">Thịt dê</div>
+          </div>
+        </div>
+        <div class="item">
+          Đồ uống các loại
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Nước ngọt</div>
+            <div class="sub_item">Nước khoáng</div>
+            <div class="sub_item">Cafe</div>
+            <div class="sub_item">Trà sữa</div>
+            <div class="sub_item">Sữa tươi</div>
+          </div>
+        </div>
+        <div class="item">
+          Gia vị nêm
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Nước mắm</div>
+            <div class="sub_item">Súp</div>
+            <div class="sub_item">Giầu ăn</div>
+            <div class="sub_item">Bột chiên</div>
+            <div class="sub_item">Nước chấm</div>
+          </div>
+        </div>
+        <div class="item">
+          Nhà cửa đời sống
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Ly, Cốc, Bình nước</div>
+            <div class="sub_item">Vệ sinh nhà cửa</div>
+            <div class="sub_item">Sửa chữa nhà cửa</div>
+            <div class="sub_item">Trang trí nhà cửa</div>
+          </div>
+        </div>
+        <div class="item">
+          Chăm sóc thú cưng
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Thức ăn thú cưng</div>
+            <div class="sub_item">Đồ dùng cho thú cưng</div>
+            <div class="sub_item">Thuốc hỗ trợ</div>
+          </div>
+        </div>
+        <div class="item">
+          Đồ chơi
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Đồ chơi điều khiển</div>
+            <div class="sub_item">Đất nặn</div>
+            <div class="sub_item">Gấu bông</div>
+          </div>
+        </div>
+        <div class="item">
+          Dụng cụ thể thao
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Gậy gold, giỏ</div>
+            <div class="sub_item">Gym</div>
+            <div class="sub_item">Bóng thể thao</div>
+            <div class="sub_item">Giày thể thao</div>
+          </div>
+        </div>
+        <div class="item">
+          Linh kiện điện tử
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Linh kiện máy tính</div>
+            <div class="sub_item">Linh kiện điện thoại</div>
+            <div class="sub_item">Camera</div>
+          </div>
+        </div>
+        <div class="item">
+          Dụng cụ học sinh
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Giấy kiểm tra</div>
+            <div class="sub_item">Bút mực, bút bi, bút chì</div>
+            <div class="sub_item">Bàn học</div>
+            <div class="sub_item">Đèn học</div>
+          </div>
+        </div>
+        <div class="item">
+          Đồ dùng cá nhân
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Khăn mặt, khăn tắm</div>
+            <div class="sub_item">Keo vuốt tóc</div>
+            <div class="sub_item">Mặt nạ</div>
+            <div class="sub_item">Len</div>
+          </div>
+        </div>
+        <div class="item">
+          Đồ điện gia dụng
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Quạt</div>
+            <div class="sub_item">Đèn quang, iot</div>
+            <div class="sub_item">Bếp điện, bếp từ</div>
+            <div class="sub_item">Máy tính</div>
+            <div class="sub_item">Tivi</div>
+          </div>
+        </div>
+        <div class="item">
+          Quà lưu niệm
+          <span class="fa">&#xf105;</span>
+          <div class="sub_bar">
+            <div class="sub_item">Lật đật</div>
+            <div class="sub_item">Giỏ quà</div>
+            <div class="sub_item">Bưu thiếp</div>
+          </div>
+        </div>
+      </div>
 
-		<div class="menu_bar">		
-			<div class="title">Danh mục sản phẩm</div>
-			<div class="item">
-				Sản phẩm ăn liền
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Mì ăn liền
-					</div>
-					<div class="sub_item">
-						Phở, hủ tiếu, miến
-					</div>
-					<div class="sub_item">
-						Cháo gói, cháo tươi
-					</div>
-					<div class="sub_item">
-						Bánh canh, bánh đa
-					</div>
-					<div class="sub_item">
-						Lương khô
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Đồ tươi sống
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Thịt lợn
-					</div>
-					<div class="sub_item">
-						Gà, trứng
-					</div>
-					<div class="sub_item">
-						Rau củ sạch
-					</div>
-					<div class="sub_item">
-						Cá, hải sản
-					</div>
-					<div class="sub_item">
-						Thịt dê
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Đồ uống các loại
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Nước ngọt
-					</div>
-					<div class="sub_item">
-						Nước khoáng
-					</div>
-					<div class="sub_item">
-						Cafe
-					</div>
-					<div class="sub_item">
-						Trà sữa
-					</div>
-					<div class="sub_item">
-						Sữa tươi
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Gia vị nêm
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Nước mắm
-					</div>
-					<div class="sub_item">
-						Súp
-					</div>
-					<div class="sub_item">
-						Giầu ăn
-					</div>
-					<div class="sub_item">
-						Bột chiên
-					</div>
-					<div class="sub_item">
-						Nước chấm
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Nhà cửa đời sống
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Ly, Cốc, Bình nước
-					</div>
-					<div class="sub_item">
-						Vệ sinh nhà cửa
-					</div>
-					<div class="sub_item">
-						Sửa chữa nhà cửa
-					</div>
-					<div class="sub_item">
-						Trang trí nhà cửa
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Chăm sóc thú cưng
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Thức ăn thú cưng
-					</div>
-					<div class="sub_item">
-						Đồ dùng cho thú cưng
-					</div>
-					<div class="sub_item">
-						Thuốc hỗ trợ
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Đồ chơi
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Đồ chơi điều khiển
-					</div>
-					<div class="sub_item">
-						Đất nặn
-					</div>
-					<div class="sub_item">
-						Gấu bông
-					</div>
-				</div>				
-			</div>
-			<div class="item">
-				Dụng cụ thể thao
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Gậy gold, giỏ
-					</div>
-					<div class="sub_item">
-						Gym
-					</div>
-					<div class="sub_item">
-						Bóng thể thao
-					</div>
-					<div class="sub_item">
-						Giày thể thao
-					</div>
-				</div>	
-			</div>
-			<div class="item">
-				Linh kiện điện tử
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Linh kiện máy tính
-					</div>
-					<div class="sub_item">
-						Linh kiện điện thoại
-					</div>
-					<div class="sub_item">
-						Camera
-					</div>
-				</div>	
-			</div>
-			<div class="item">
-				Dụng cụ học sinh
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Giấy kiểm tra
-					</div>
-					<div class="sub_item">
-						Bút mực, bút bi, bút chì
-					</div>
-					<div class="sub_item">
-						Bàn học
-					</div>
-					<div class="sub_item">
-						Đèn học
-					</div>
-				</div>	
-			</div>
-			<div class="item">
-				Đồ dùng cá nhân
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Khăn mặt, khăn tắm
-					</div>
-					<div class="sub_item">
-						Keo vuốt tóc
-					</div>
-					<div class="sub_item">
-						Mặt nạ
-					</div>
-					<div class="sub_item">
-						Len
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Đồ điện gia dụng
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Quạt
-					</div>
-					<div class="sub_item">
-						Đèn quang, iot
-					</div>
-					<div class="sub_item">
-						Bếp điện, bếp từ
-					</div>
-					<div class="sub_item">
-						Máy tính
-					</div>
-					<div class="sub_item">
-						Tivi
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				Quà lưu niệm
-				<span class="fa">&#xf105;</span>
-				<div class="sub_bar">
-					<div class="sub_item">
-						Lật đật
-					</div>
-					<div class="sub_item">
-						Giỏ quà
-					</div>
-					<div class="sub_item">
-						Bưu thiếp
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="content_box">
-			<div class="url">Trang chủ  >  Sản phẩm ăn liền  >  Mì ba miền</div>
-			<div class="content">
-				<div class="image">
-					<div class="main_image">
-						<img src="./../img/thung-30-goi-mi-3-mien-tom-chua-cay-65g-201912091512061369.jpg">
-						<button class="btn-left">&laquo;</button>
-						<button class="btn-right">&raquo;</button>
-					</div>
-					<div class="sub_image">		
-						<img src="./../img/thung-30-goi-mi-3-mien-tom-chua-cay-65g-201912091512061369.jpg">
-						<img src="./../img/mi-3-mien-tom-chua-cay-goi-65g-201912091503351328.jpg">
-						<img src="./../img/mi_3_mien.jpg">
-						<img src="./../img/thung-30-goi-mi-3-mien-tom-chua-cay-65g-201912091512061369.jpg">
-						<img src="./../img/mi-3-mien-tom-chua-cay-goi-65g-201912091503351328.jpg">
-						<img src="./../img/mi_3_mien.jpg">				
-					</div>
-				</div>
-				<div class="info">
-					<div class="name">Thùng 30 gói mì 3 Miền Gold chua cay Thái 75g</div>
-					<div class="expiry_date">HSD còn 132 ngày</div>
-					<div class="price">107.000đ</div>
-					<div class="type">
-						<input type="radio" id="goi" name="type" value="goi">
-						<label for="goi">Gói</label><br>
-						<input type="radio" id="thung" name="type" value="thung" checked>
-						<label for="thung">Thùng 30 gói</label><br>
-					</div>
-					<button class="add_button btn btn-primary">Thêm vào giỏ hàng</button>
-				</div>				
-			</div>
-			<div class="description">
-				<div class="title">Thông tin sản phẩm</div>
-				<div class="detail">Đột phá với nước súp tôm thịt ngọt thanh ngọt đậm đà hợp khẩu vị người Việt Nam. Sợi mì dai, thơm, màu vàng đẹp mắt hòa quyện trong làn nước súp 3 Miền tròn vị tạo ra mì 3 Miền Gold chua cay Thái 75g thùng 30 gói thơm ngon, tiết kiệm, là lựa chọn số một cho bữa ăn đơn giản mà vẫn đầy đủ dưỡng chất.</div>
-				<table>
-					<tr class="attribute">
-						<td class="label">Loại mì</td>
-						<td class="text">Mì nước</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Vị mì</td>
-						<td class="text">Chua cay Thái</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Sợi mì</td>
-						<td class="text">Sợi tròn, nhỏ</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Khối lượng</td>
-						<td class="text">75g/gói</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Cách dùng</td>
-						<td class="text">Cho vắt mì và các gói gia vị vào tô. Chế 400ml nước sôi vào tô mì, đậy kín và chờ trong 3 phút. Mở nắp, trộn đều và bắt đầu thưởng thức.</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Bảo quản</td>
-						<td class="text">Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Không để gần hóa chất hoặc sản phẩm có mùi mạnh.</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Thương hiệu</td>
-						<td class="text">3 Miền (Việt Nam)</td>
-					</tr>
-					<tr class="attribute">
-						<td class="label">Sản xuất tại</td>
-						<td class="text">Việt Nam</td>
-					</tr>
-				</table>
-			</div>
-			<div class="comment">
-				<div class="title">Hỏi đáp sản phẩm</div>
-				<textarea class="area form-control" name="txtContent" rows="4" maxlength="1000" placeholder="Mời bạn bình luận hoặc đặt câu hỏi..." aria-label="Mời bạn bình luận hoặc đặt câu hỏi...." spellcheck="false"></textarea>
-				<div class="form-group">
-					<input type="text" name="name" placeholder="Họ tên (bắt buộc)" class="form-control" autocomplete="off">
-					<input type="text" name="sdt" placeholder="Số điện thoại" class="form-control" autocomplete="off">
-					<button class="btn btn-primary">Gửi</button>
-				</div>
-			</div>
-		</div>
-
-	</div>
-	<!-- <div class="footer_box">
+      <div class="content_box">
+        <div class="url">Trang chủ > Sản phẩm ăn liền > Mì ăn liền > Mì ba miền</div>
+        <div class="content">
+          <div class="image">
+            <div class="main_image">
+              <img
+                src="./../img/thung-30-goi-mi-3-mien-tom-chua-cay-65g-201912091512061369.jpg"
+              />
+              <button class="btn-left">&laquo;</button>
+              <button class="btn-right">&raquo;</button>
+            </div>
+            <div class="sub_image">
+              <img
+                src="./../img/thung-30-goi-mi-3-mien-tom-chua-cay-65g-201912091512061369.jpg"
+              />
+              <img
+                src="./../img/mi-3-mien-tom-chua-cay-goi-65g-201912091503351328.jpg"
+              />
+              <img src="./../img/mi_3_mien.jpg" />
+              <img
+                src="./../img/thung-30-goi-mi-3-mien-tom-chua-cay-65g-201912091512061369.jpg"
+              />
+              <img
+                src="./../img/mi-3-mien-tom-chua-cay-goi-65g-201912091503351328.jpg"
+              />
+              <img src="./../img/mi_3_mien.jpg" />
+            </div>
+          </div>
+          <div class="info">
+            <div class="name">
+              Thùng 30 gói mì 3 Miền Gold chua cay Thái 75g
+            </div>
+            <div class="expiry_date">HSD còn 132 ngày</div>
+            <div class="price">107.000đ</div>
+            <div class="type">
+              <input type="radio" id="goi" name="type" value="goi" />
+              <label for="goi">Gói</label><br />
+              <input
+                type="radio"
+                id="thung"
+                name="type"
+                value="thung"
+                checked
+              />
+              <label for="thung">Thùng 30 gói</label><br />
+            </div>
+            <button class="add_button btn btn-primary">
+              Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+        <div class="description">
+          <div class="title">Thông tin sản phẩm</div>
+          <div class="detail">
+            Đột phá với nước súp tôm thịt ngọt thanh ngọt đậm đà hợp khẩu vị
+            người Việt Nam. Sợi mì dai, thơm, màu vàng đẹp mắt hòa quyện trong
+            làn nước súp 3 Miền tròn vị tạo ra mì 3 Miền Gold chua cay Thái 75g
+            thùng 30 gói thơm ngon, tiết kiệm, là lựa chọn số một cho bữa ăn đơn
+            giản mà vẫn đầy đủ dưỡng chất.
+          </div>
+          <table>
+            <tr class="attribute">
+              <td class="label">Loại mì</td>
+              <td class="text">Mì nước</td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Vị mì</td>
+              <td class="text">Chua cay Thái</td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Sợi mì</td>
+              <td class="text">Sợi tròn, nhỏ</td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Khối lượng</td>
+              <td class="text">75g/gói</td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Cách dùng</td>
+              <td class="text">
+                Cho vắt mì và các gói gia vị vào tô. Chế 400ml nước sôi vào tô
+                mì, đậy kín và chờ trong 3 phút. Mở nắp, trộn đều và bắt đầu
+                thưởng thức.
+              </td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Bảo quản</td>
+              <td class="text">
+                Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.
+                Không để gần hóa chất hoặc sản phẩm có mùi mạnh.
+              </td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Thương hiệu</td>
+              <td class="text">3 Miền (Việt Nam)</td>
+            </tr>
+            <tr class="attribute">
+              <td class="label">Sản xuất tại</td>
+              <td class="text">Việt Nam</td>
+            </tr>
+          </table>
+        </div>
+        <div class="comment">
+          <div class="title">Hỏi đáp sản phẩm</div>
+          <textarea
+            class="area form-control"
+            name="txtContent"
+            rows="4"
+            maxlength="1000"
+            placeholder="Mời bạn bình luận hoặc đặt câu hỏi..."
+            aria-label="Mời bạn bình luận hoặc đặt câu hỏi...."
+            spellcheck="false"
+          ></textarea>
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Họ tên (bắt buộc)"
+              class="form-control"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              name="sdt"
+              placeholder="Số điện thoại"
+              class="form-control"
+              autocomplete="off"
+            />
+            <button class="btn btn-primary">Gửi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="footer_box">
 		<div class="footer_description">
 			<div class="footer_description_title">BLOG CỦA CHÚNG TÔI</div>
 			<div class="footer_description_content" style="height: 50px">Chưa có bài viết để hiển thị. Vui lòng vào trang quản trị để cấu hình cho phần này</div>
 		</div>
 	</div> -->
-</body>
-<script type="text/javascript" src="./../js/base.js"></script>
-<script type="text/javascript" src="./../js/home.js"></script>
-<script type="text/javascript">
-	function add_to_cart() {
-
-		document.querySelector('.pop_up_order').style.display = 'flex';
-	}
-	function back() {
-
-		document.querySelector('.pop_up_order').style.display = 'none';
-	}
-	function success() {
-
-		document.querySelector('.pop_up_order').style.display = 'none';
-		alert("Thêm vào giỏ hàng thành công");
-	}
-</script>
+  </body>
+  <script type="text/javascript" src="./../js/base.js"></script>
+  <script type="text/javascript" src="./../js/home.js"></script>
+  <script type="text/javascript">
+    function add_to_cart() {
+      document.querySelector(".pop_up_order").style.display = "flex";
+    }
+    function back() {
+      document.querySelector(".pop_up_order").style.display = "none";
+    }
+    function success() {
+      document.querySelector(".pop_up_order").style.display = "none";
+      alert("Thêm vào giỏ hàng thành công");
+    }
+  </script>
 </html>
