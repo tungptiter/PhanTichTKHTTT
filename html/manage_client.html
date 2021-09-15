@@ -318,33 +318,25 @@
       <hr>
       <div class="page-breadcrumb">
           <div class="row form-group">
-              <div class="col-lg-3">
-                  <div>
-                      <label>Từ khóa</label>
-                  </div>
-                  <div class="customize-input">
-                      <input type="text" class="form-control" id="keyword"/>
-                  </div>
+            <div class="col-lg-2 px-4">
+              <div>
+                  <label>Trạng thái</label>
               </div>
-              <div class="col-lg-2">
-                    <div>
-                        <label>Trạng thái</label>
-                    </div>
-                    <select class="form-select" aria-label="Default select example">
-                      <option value="1">Tất cả</option>
-                      <option value="2">Chưa duyệt</option>
-                      <option value="3">Đã xuất</option>
-                      <option value="3">Hoàn Thành</option>
-                      <option value="3">Bị hủy</option>
-                    </select>
+              <div class="customize-input">
+                  <select class="form-control" id="filter">
+                      <option selected value="all">Tất cả</option>
+                      <option value="active">Có</option>
+                      <option value="active">Không</option>
+                  </select>
+              </div>
+            </div>
+            <div class="col-lg-2 px-0">
+                <div class="pt-4">
+                    <button type="button" class="btn btn-primary" id="btn-search">
+                        Thống kê
+                    </button>
                 </div>
-                <div class="col-lg-2">
-                    <div class="pt-4">
-                        <button type="button" class="btn btn-primary" id="btn-search">
-                            Thống kê
-                        </button>
-                    </div>
-                </div>
+            </div>
           </div>
       </div>
       <hr>

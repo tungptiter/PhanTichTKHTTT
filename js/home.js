@@ -21,3 +21,11 @@ document.querySelectorAll('.home_box .list .item').forEach(item => {
 		window.location.href = './infor.html';
 	})
 })
+
+document.querySelectorAll('.home_box .list .item .button_to_cart').forEach(item => {
+
+	item.addEventListener('click', function(evt) {
+
+		event.stopPropagation();
+	})
+})
