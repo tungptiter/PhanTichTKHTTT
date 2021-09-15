@@ -294,13 +294,13 @@
 		<div class="page-breadcrumb">
     <div class="row">
         <div class="col-7 align-self-center">
-            <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Thêm nhà cung cấp</h4>
+            <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Cập nhật nhà cung cấp</h4>
             <div class="d-flex align-items-center">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb m-0 p-0">
                         <li class="breadcrumb-item"><a href="https://google.com" class="text-muted" style="text-decoration: none;">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a href="manage_supply.html" class="text-muted" style="text-decoration: none;"> Quản lý nhà cung cấp</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><a style="text-decoration: none; color: #3187F1FF">Thêm nhà cung cấp</a> </li>
+                        <li class="breadcrumb-item active" aria-current="page"><a style="text-decoration: none; color: #3187F1FF">Cập nhật nhà cung cấp</a> </li>
                     </ol>
                 </nav>
             </div>
@@ -316,7 +316,7 @@
         <label>Nhập họ và tên</label>
       </div>
       <div>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" id="name">
       </div>
     </div>
   </div>
@@ -326,7 +326,7 @@
         <label>Nhập địa chỉ liên hệ</label>
       </div>
       <div>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" id="address">
       </div>
     </div>
   </div>
@@ -336,7 +336,7 @@
         <label>Nhập số điện thoại</label>
       </div>
       <div>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" id="phone">
       </div>
     </div>
   </div>
@@ -346,7 +346,8 @@
         <label><strong></strong></label>
       </div>
       <div class="customize-input">
-        <button class="btn btn-success" onclick="btn_add()">Thêm</button>
+        <button class="btn btn-success" onclick="btn_update()">Lưu thay đổi</button>
+        <button class="btn btn-danger" onclick="btn_delete()">Xóa</button>
       </div>
     </div>
   </div>
@@ -356,8 +357,19 @@
 	</div>
 </body>
 <script type="text/javascript">
-    function btn_add() {
-        confirm("Bạn có chắc chắn muốn thêm nhà cung cấp này không?");
+    var com = window.location.href;
+    var url = new URL(com);
+    var c = url.searchParams.get("company");
+    var a = url.searchParams.get("address");
+    var p = url.searchParams.get("phone");
+    document.getElementById("name").value = c;
+    document.getElementById("address").value = a;
+    document.getElementById("phone").value = p;
+    function btn_update(){
+        confirm("Bạn có chắc chắn cập nhật dữ liệu không?")
+    }
+    function btn_delete(){
+        confirm("Bạn có chắc chắn xóa nhà cung cấp không?")
     }
 </script>
 <script type="text/javascript" src="./../js/base.js"></script>
