@@ -311,57 +311,7 @@
         <!-- </div> -->
       </div>
     </div>
-    <div class="container" style="padding-top: 120px">
-      <div class="page-breadcrumb">
-          <div class="row">
-              <div class="col-7 align-self-center">
-                  <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Quản lý khách hàng</h4>
-                  <div class="d-flex align-items-center">
-                      <nav aria-label="breadcrumb">
-                          <ol class="breadcrumb m-0 p-0">
-                              <li class="breadcrumb-item"><a href="https://google.com" class="text-muted" style="">Trang chủ</a>
-                              </li>
-                              <li class="breadcrumb-item text-muted active" aria-current="page"><a style="color: #3187F1FF">Quản lý khách hàng</a></li>
-                          </ol>
-                      </nav>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <hr>
-      <div class="page-breadcrumb">
-          <div class="row form-group">
-              <div class="col-lg-3">
-                  <div>
-                      <label>Từ khóa</label>
-                  </div>
-                  <div class="customize-input">
-                      <input type="text" class="form-control" id="keyword"/>
-                  </div>
-              </div>
-              <div class="col-lg-2">
-                    <div>
-                        <label>Trạng thái</label>
-                    </div>
-                    <select class="form-select" aria-label="Default select example">
-                      <option value="1">Tất cả</option>
-                      <option value="2">Chưa duyệt</option>
-                      <option value="3">Đã xuất</option>
-                      <option value="3">Hoàn Thành</option>
-                      <option value="3">Bị hủy</option>
-                    </select>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pt-4">
-                        <button type="button" class="btn btn-primary" id="btn-search">
-                            Thống kê
-                        </button>
-                    </div>
-                </div>
-          </div>
-      </div>
-      <hr>
-      <div class="row page-breadcrumb pt-2 pb-3" style="margin-left: 0.2%;">
+    <div class="row page-breadcrumb pt-2 pb-3" style="margin-left: 0.2%;">
             <div class="col-lg-3">                
                 <div class="customize-input">
                     <input type="text" class="form-control" placeholder="Nhập mã đơn hàng ..." />
@@ -373,64 +323,91 @@
                 </button>
             </div>
         </div>
-      <div class="container-fluid">
-          <table class="table table-hover table-bordered mb-0">
-              <thead class="bg-primary text-white">
-              <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Tên đăng nhập</th>
-                  <th scope="col">Họ và tên</th>
-                  <th scope="col">Số điện thoại</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Active</th>
-              </tr>
-              </thead>
-              <tbody class="border border-secondary" id="tbl">
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">01</a></th>
-                  <td>TungNT</td>
-                  <td>Nguyễn Thanh Tùng</td>
-                  <td>0374356842</td>
-                  <td>tungnt@gmail.com</td>
-                  <td>Có</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">02</a></th>
-                  <td>DucDN</td>
-                  <td>Đinh Ngọc Đức</td>
-                  <td>0564238452</td>
-                  <td>ducdn@gmail.com</td>
-                  <td>Có</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">03</a></th>
-                  <td>ThinPT</td>
-                  <td>Phan Văn Thìn</td>
-                  <td>0374306505</td>
-                  <td>thinpt@gmail.com</td>
-                  <td>Không</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">04</a></th>
-                  <td>TrungNB</td>
-                  <td>Nguyễn Bảo Trung</td>
-                  <td>0354265821</td>
-                  <td>trungnb@gmail.com</td>
-                  <td>Có</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">04</a></th>
-                  <td>MừngNH</td>
-                  <td>Nguyễn Hữu Mừng</td>
-                  <td>0364524963</td>
-                  <td>mungnh@gmail.com</td>
-                  <td>Không</td>
-              </tr>
+    <div class="container" style="padding-top: 120px;">
+    <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-7 align-self-center">
+                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Cập nhật thông tin khách hàng</h4>
+                    <div class="d-flex align-items-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 p-0">
+                                <li class="breadcrumb-item"><a href="https://google.com" class="text-muted" style="">Trang chủ</a></li>
+                                <li class="breadcrumb-item"><a href="manage_client.html" class="text-muted" style="">Quản lý khách hàng</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a style="color: #3187F1FF">Cập nhật khách hàng</a> </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
 
-              </tbody>
-          </table>
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Tên đăng nhập</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="name" value="TâmHT" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Họ và tên</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="address" value="Nguyễn Huy Tâm" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Email</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="phone" value="tamnh@gmail.com" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Số điện thoại</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="phone" value="035698541" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Active</label>
+              </div>
+              <select class="form-control">
+                <option>Có</option>
+                <option>Không</option>
+              </select>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-lg">
+              <div>
+                <label><strong></strong></label>
+              </div>
+              <div class="customize-input">
+                <button class="btn btn-success" onclick="btn_update()">Lưu thay đổi</button>
+                <button class="btn btn-danger" onclick="btn_delete()">Xóa</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      </div>
+        </div>
   </div>
   </body>
   <script type="text/javascript" src="./../js/base.js"></script>
