@@ -303,15 +303,15 @@
       <div class="container">
         <h3 class="text-center">Nhập Hàng Hóa</h3>
         <div class="row align-items-center justify-content-center">
-          <!-- Nhập nhà cung cấp-->
+          <!-- Nhập hàng hóa -->
           <div class="col-md-5">
-            <h5 class="my-3">Tên Nhà Cung Cấp</h5>
+            <h5 class="my-3">Tìm nhà cung cấp</h5>
             <form class="search_form d-flex">
               <input
                 class="form-control me-2"
-                id="search"
+                id="search_hh"
                 type="search"
-                placeholder="Nhập tên nhà cung cấp"
+                placeholder="Nhập tên hoặc mã hàng hóa cần tìm"
                 aria-label="Search"
               />
               <button class="btn btn-outline-success" type="submit">
@@ -329,13 +329,9 @@
                 </svg>
               </button>
             </form>
-            <div id="match-list"></div>
-
-            <!-- test -->
-
-            <!-- end of test -->
+            <div id="match-list-hh"></div>
           </div>
-          <!--end of Nhập nhà cung cấp-->
+          <!-- End of Nhập hàng hóa -->
 
           <!-- Nhập hàng hóa -->
           <div class="col-md-5">
@@ -408,10 +404,11 @@
 
           <!-- Buttom hóa đơn và in hóa đơn -->
           <div class="col-md-5">
-            <h5 class="my-3">Xác Nhận</h5>
+            <h5 class="my-3">Thực hiện</h5>
 
             <!-- <button type="button" class="btn btn-outline-success d-inline-flex">Thành tiền</button> -->
-            <button type="button" class="btn btn-primary" onclick="luuThongTin()">In hóa đơn</button>
+            <button type="button" class="btn btn-success" onclick="luuThongTin()">In hóa đơn</button>
+            <button type="button" class="btn btn-primary" onclick="luuThongTin()">Thêm tiếp mặt hàng</button>
           </div>
           <!-- End of Buttom hóa đơn và in hóa đơn -->
         </div>
@@ -511,10 +508,11 @@
 
   <script type="text/javascript" src="./../data/hanghoa.json"></script>
   <script src="./../js/search.js"></script>
-  <script
+  <!-- <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"
-  ></script>
+  ></script> -->
   <script type="text/javascript" src="./../js/base.js"></script>
+  <script type="text/javascript" src="./../js/search.js"></script>
 </html>
