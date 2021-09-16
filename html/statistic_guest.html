@@ -161,14 +161,14 @@
         
                             <div class="profile_dd">
                                 <ul class="profile_ul">
-                                    <li><a href="./profile.html">My Profile</a></li>
+                                    <li><a href="./profile.html">Tài khoản của tôi</a></li>
                                     <li><a href="./order_status.html">Đơn mua</a></li>
-<li><a href="./manage_supply.html">Quản lý nhà cung cấp</a></li>
-<li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
-<li><a href="./manage_client.html">Quản lý khách hàng</a></li>
-                                    <li><a href="./supply.html">Nhập hàng hóa</a></li>
-                                    <li><a href="./add_good.html">Thêm thông tin mặt hàng</a></li>
-                                    <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
+                                    <li><a href="./manage_supply.html">Quản lý nhà cung cấp</a></li>
+                                    <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
+                                    <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
+                                    <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                                  
+                                    <li><a href="./add_good.html">Quản lý mặt hàng</a></li>
+                                    <li><a href="./supply.html">Nhập hàng hóa</a></li>                              
                                     <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
                                     <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
                                     <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
@@ -297,59 +297,62 @@
     </div>
 	<div class="container">
 		<div class="page-breadcrumb">
-		    <div class="row">
-		        <div class="col-7 align-self-center">
-		            <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Thống kê khách hàng theo doanh thu</h4>
-		            <div class="d-flex align-items-center">
-		                <nav aria-label="breadcrumb">
-		                    <ol class="breadcrumb m-0 p-0">
-		                        <li class="breadcrumb-item"><a href="./home.html" class="text-muted">Trang chủ</a></li>
-		                        <li class="breadcrumb-item text-muted active" aria-current="page">Thống kê khách hàng theo doanh thu</li>
-		                    </ol>
-		                </nav>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<hr>
+            <div class="row">
+                <div class="col-7 align-self-center">
+                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Thống kê khách hàng theo doanh thu</h4>
+                    <div class="d-flex align-items-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 p-0">
+                                <li class="breadcrumb-item"><a href="./home.html" class="text-muted">Trang chủ</a></li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page">Thống kê khách hàng theo doanh thu</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
 
-		<div class="page-breadcrumb">
-		    <div class="row form-group">
-		        <div class="col-lg-4">
-		            <div>
-		                <label>Từ khóa</label>
-		            </div>
-		            <div class="customize-input">
-		                <input type="text" class="form-control" id="keyword"/>
-		            </div>
-
-		        </div>
-		        <div class="col-lg-3">
-		            <div>
-		                <label>Từ ngày</label>
-		            </div>
-		            <div class="customize-input">
-		                <input type="text" class="form-control"/>
-		            </div>
-		        </div>
-		        <div class="col-lg-3">
-		            <div>
-		                <label>Đến ngày</label>
-		            </div>
-		            <div class="customize-input">
-		                <input type="text" class="form-control"/>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<hr>
-		<div class="row page-breadcrumb" style="margin-left: 0.5%;">
-		    <div class="p-2">
-		        <button type="button" class="btn btn-primary" id="btn-search">
-		            Tìm kiếm
-		        </button>
-		    </div>
-		</div>
+        <div class="page-breadcrumb" style="margin-left: 0.3%;">
+            <div class="row form-group">
+                <div class="col-lg-3 px-4">
+                    <div>
+                        <label>Từ ngày</label>
+                    </div>
+                    <div class="customize-input">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-4">
+                    <div>
+                        <label>Đến ngày</label>
+                    </div>
+                    <div class="customize-input">
+                        <input type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 pt-4">
+                    <div class="">
+                        <button type="button" class="btn btn-primary" id="btn-search">
+                            Thống kê
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row page-breadcrumb pb-3" style="margin-left: 0.2%;">
+            <div class="col-lg-3">                
+                <div class="customize-input">
+                    <input type="text" class="form-control" placeholder="Nhập tên khách hàng ..." />
+                </div>                
+            </div>
+            <div class="col-lg-3">
+                <button type="button" class="btn btn-primary" id="btn-search">
+                    Tìm kiếm
+                </button>
+            </div>
+        </div>
 		<div class="container-fluid">
 		    <table class="table table-hover table-bordered mb-0">
 		        <thead class="bg-primary text-white">
