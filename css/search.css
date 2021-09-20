@@ -1,13 +1,14 @@
-.search {
-    font-size: 2rem;
-    
+.home_box {
+  min-height: 900px;
 }
-/* 
-.search_form {
-    height: 70%;
-    width: 50%
-} */
-/* 
-#match-list {
-    height: 1rem;
-} */
+.home_box .list {
+  padding-top: 5px;
+}
+.home_box .list .line_items {
+  padding: 4px 3px 2px 3px;
+}
+.home_box .line_items .items_content {
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=search.css.map */

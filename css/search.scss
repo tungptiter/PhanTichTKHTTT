@@ -1,0 +1,16 @@
+.home_box {
+
+	min-height: 900px;
+
+	.list {
+		padding-top: 5px;
+		.line_items {
+			padding: 4px 3px 2px 3px;
+		}
+	}
+
+	.line_items .items_content {
+
+		flex-wrap: wrap;
+	}
+}

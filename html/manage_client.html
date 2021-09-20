@@ -178,16 +178,34 @@
                 <ul class="profile_ul">
                   <li><a href="./profile.html">Tài khoản của tôi</a></li>
                   <li><a href="./order_status.html">Đơn mua</a></li>
-                  <li><a href="./manage_supply.html">Quản lý nhà cung cấp</a></li>
-                  <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
+                  <li>
+                    <a href="./manage_supply.html">Quản lý nhà cung cấp</a>
+                  </li>
+                  <li>
+                    <a href="./manage_employee.html">Quản lý nhân viên</a>
+                  </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
-                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                            
-                  <li><a href="./add_good.html">Quản lý mặt hàng</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>                          
-                  <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
-                  <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
-                  <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
-                  <li><a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a></li>
+                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
+                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li>
+                    <a href="./statistic_goods.html"
+                      >Thống kê sản phẩm theo doanh thu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./statistic_guest.html"
+                      >Thống kê khách hàng theo doanh thu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./statistic_supply.html"
+                      >Thống kê nhà cung cấp theo lượng sản phẩm nhập</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a>
+                  </li>
                   <li><a href="./login.html">Đăng xuất</a></li>
                 </ul>
               </div>
@@ -300,117 +318,151 @@
     </div>
     <div class="container" style="padding-top: 120px">
       <div class="page-breadcrumb">
-          <div class="row">
-              <div class="col-7 align-self-center">
-                  <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Quản lý khách hàng</h4>
-                  <div class="d-flex align-items-center">
-                      <nav aria-label="breadcrumb">
-                          <ol class="breadcrumb m-0 p-0">
-                              <li class="breadcrumb-item"><a href="https://google.com" class="text-muted" style="">Trang chủ</a>
-                              </li>
-                              <li class="breadcrumb-item text-muted active" aria-current="page"><a style="color: #3187F1FF">Quản lý khách hàng</a></li>
-                          </ol>
-                      </nav>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <hr>
-      <div class="page-breadcrumb" style="margin-left: 0.3%;">
-          <div class="row form-group">
-            <div class="col-lg-2 px-4">
-                <div>
-                  <label>Trạng thái</label>
-              </div>
-              <div class="customize-input">
-                  <select class="form-control" id="filter">
-                      <option selected value="all">Tất cả</option>
-                      <option value="active">Có</option>
-                      <option value="active">Không</option>
-                  </select>
-              </div>
-            </div>
-            <div class="col-lg-9 px-0 pt-4">
-                <div class="">
-                    <button type="button" class="btn btn-primary" id="btn-search">
-                        Thống kê
-                    </button>
-                </div>
+        <div class="row">
+          <div class="col-7 align-self-center">
+            <h4
+              class="page-title text-truncate text-dark font-weight-medium mb-1"
+            >
+              Quản lý khách hàng
+            </h4>
+            <div class="d-flex align-items-center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0 p-0">
+                  <li class="breadcrumb-item">
+                    <a href="https://google.com" class="text-muted" style=""
+                      >Trang chủ</a
+                    >
+                  </li>
+                  <li
+                    class="breadcrumb-item text-muted active"
+                    aria-current="page"
+                  >
+                    <a style="color: #3187f1ff">Quản lý khách hàng</a>
+                  </li>
+                </ol>
+              </nav>
             </div>
           </div>
-      </div>
-      <hr>
-      <div class="row page-breadcrumb pb-3" style="margin-left: 0.2%;">
-            <div class="col-lg-3">                
-                <div class="customize-input">
-                    <input type="text" class="form-control" placeholder="Nhập tên khách hàng ..." />
-                </div>                
-            </div>
-            <div class="col-lg-3">
-                <button type="button" class="btn btn-primary" id="btn-search">
-                    Tìm kiếm
-                </button>
-            </div>
         </div>
-      <div class="container-fluid">
-          <table class="table table-hover table-bordered mb-0">
-              <thead class="bg-primary text-white">
-              <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Tên đăng nhập</th>
-                  <th scope="col">Họ và tên</th>
-                  <th scope="col">Số điện thoại</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Active</th>
-              </tr>
-              </thead>
-              <tbody class="border border-secondary" id="tbl">
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">01</a></th>
-                  <td>TungNT</td>
-                  <td>Nguyễn Thanh Tùng</td>
-                  <td>0374356842</td>
-                  <td>tungnt@gmail.com</td>
-                  <td>Có</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">02</a></th>
-                  <td>DucDN</td>
-                  <td>Đinh Ngọc Đức</td>
-                  <td>0564238452</td>
-                  <td>ducdn@gmail.com</td>
-                  <td>Có</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">03</a></th>
-                  <td>ThinPT</td>
-                  <td>Phan Văn Thìn</td>
-                  <td>0374306505</td>
-                  <td>thinpt@gmail.com</td>
-                  <td>Không</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">04</a></th>
-                  <td>TrungNB</td>
-                  <td>Nguyễn Bảo Trung</td>
-                  <td>0354265821</td>
-                  <td>trungnb@gmail.com</td>
-                  <td>Có</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_client.html" style="text-decoration: none">04</a></th>
-                  <td>MừngNH</td>
-                  <td>Nguyễn Hữu Mừng</td>
-                  <td>0364524963</td>
-                  <td>mungnh@gmail.com</td>
-                  <td>Không</td>
-              </tr>
-
-              </tbody>
-          </table>
-
       </div>
-  </div>
+      <hr />
+      <div class="page-breadcrumb" style="margin-left: 0.3%">
+        <div class="row form-group">
+          <div class="col-lg-2 px-4">
+            <div>
+              <label>Trạng thái</label>
+            </div>
+            <div class="customize-input">
+              <select class="form-control" id="filter">
+                <option selected value="all">Tất cả</option>
+                <option value="active">Có</option>
+                <option value="active">Không</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-9 px-0 pt-4">
+            <div class="">
+              <button type="button" class="btn btn-primary" id="btn-search">
+                Thống kê
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row page-breadcrumb pb-3" style="margin-left: 0.2%">
+        <div class="col-lg-3">
+          <div class="customize-input">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nhập tên khách hàng ..."
+            />
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <button type="button" class="btn btn-primary" id="btn-search">
+            Tìm kiếm
+          </button>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <table class="table table-hover table-bordered mb-0">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Tên đăng nhập</th>
+              <th scope="col">Họ và tên</th>
+              <th scope="col">Số điện thoại</th>
+              <th scope="col">Email</th>
+              <th scope="col">Active</th>
+            </tr>
+          </thead>
+          <tbody class="border border-secondary" id="tbl">
+            <tr>
+              <th scope="row">
+                <a href="update_client.html" style="text-decoration: none"
+                  >01</a
+                >
+              </th>
+              <td>TungNT</td>
+              <td>Nguyễn Thanh Tùng</td>
+              <td>0374356842</td>
+              <td>tungnt@gmail.com</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="update_client.html" style="text-decoration: none"
+                  >02</a
+                >
+              </th>
+              <td>DucDN</td>
+              <td>Đinh Ngọc Đức</td>
+              <td>0564238452</td>
+              <td>ducdn@gmail.com</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="update_client.html" style="text-decoration: none"
+                  >03</a
+                >
+              </th>
+              <td>ThinPT</td>
+              <td>Phan Văn Thìn</td>
+              <td>0374306505</td>
+              <td>thinpt@gmail.com</td>
+              <td>Không</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="update_client.html" style="text-decoration: none"
+                  >04</a
+                >
+              </th>
+              <td>TrungNB</td>
+              <td>Nguyễn Bảo Trung</td>
+              <td>0354265821</td>
+              <td>trungnb@gmail.com</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="update_client.html" style="text-decoration: none"
+                  >04</a
+                >
+              </th>
+              <td>MừngNH</td>
+              <td>Nguyễn Hữu Mừng</td>
+              <td>0364524963</td>
+              <td>mungnh@gmail.com</td>
+              <td>Không</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="./../js/base.js"></script>
   <script src="./../js/confirm.js"></script>

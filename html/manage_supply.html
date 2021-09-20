@@ -178,16 +178,34 @@
                 <ul class="profile_ul">
                   <li><a href="./profile.html">Tài khoản của tôi</a></li>
                   <li><a href="./order_status.html">Đơn mua</a></li>
-                  <li><a href="./manage_supply.html">Quản lý nhà cung cấp</a></li>
-                  <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
+                  <li>
+                    <a href="./manage_supply.html">Quản lý nhà cung cấp</a>
+                  </li>
+                  <li>
+                    <a href="./manage_employee.html">Quản lý nhân viên</a>
+                  </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
-                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                            
-                  <li><a href="./add_good.html">Quản lý mặt hàng</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>                          
-                  <li><a href="./statistic_goods.html">Thống kê mặt hàng theo doanh thu</a></li>
-                  <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
-                  <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng mặt hàng nhập</a></li>
-                  <li><a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a></li>
+                  <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
+                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li>
+                    <a href="./statistic_goods.html"
+                      >Thống kê sản phẩm theo doanh thu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./statistic_guest.html"
+                      >Thống kê khách hàng theo doanh thu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./statistic_supply.html"
+                      >Thống kê nhà cung cấp theo lượng sản phẩm nhập</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./manager_bill.html">Tra cứu thông tin hóa đơn</a>
+                  </li>
                   <li><a href="./login.html">Đăng xuất</a></li>
                 </ul>
               </div>
@@ -300,82 +318,128 @@
     </div>
     <div class="container" style="padding-top: 120px">
       <div class="page-breadcrumb">
-          <div class="row">
-              <div class="col-7 align-self-center">
-                  <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Quản lý nhà cung cấp</h4>
-                  <div class="d-flex align-items-center">
-                      <nav aria-label="breadcrumb">
-                          <ol class="breadcrumb m-0 p-0">
-                              <li class="breadcrumb-item"><a href="https://google.com" class="text-muted">Trang chủ</a>
-                              </li>
-                              <li class="breadcrumb-item text-muted active" aria-current="page"><a style="color: #3187F1FF">Quản lý nhà cung cấp</a></li>
-                          </ol>
-                      </nav>
-                  </div>
-              </div>
+        <div class="row">
+          <div class="col-7 align-self-center">
+            <h4
+              class="page-title text-truncate text-dark font-weight-medium mb-1"
+            >
+              Quản lý nhà cung cấp
+            </h4>
+            <div class="d-flex align-items-center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0 p-0">
+                  <li class="breadcrumb-item">
+                    <a href="https://google.com" class="text-muted"
+                      >Trang chủ</a
+                    >
+                  </li>
+                  <li
+                    class="breadcrumb-item text-muted active"
+                    aria-current="page"
+                  >
+                    <a style="color: #3187f1ff">Quản lý nhà cung cấp</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
           </div>
+        </div>
       </div>
-      <hr>
-      <div class="row page-breadcrumb pb-3" style="margin-left: 0.5%;">
+      <hr />
+      <div class="row page-breadcrumb pb-3" style="margin-left: 0.5%">
         <div class="row form-group">
-              <div class="col-lg-3 pt-4 px-2">
-                  <div class="customize-input">
-                      <input type="text" class="form-control" placeholder="Nhập tên nhà cung cấp ..." />
-                  </div>
-              </div>
-              <div class="col-lg-9 px-0">
-                  <div class="pt-4" style="padding-left: 20px">
-                      <button type="button" class="btn btn-primary" id="btn-search">
-                          Tìm kiếm
-                      </button>
-                      <button type="button" class="btn btn-success" style="float: right">
-                        <a style="color: white !important; text-decoration: none" href="create_supply.html">Thêm</a>
-                      </button>
-                  </div>
-              </div>
+          <div class="col-lg-3 pt-4 px-2">
+            <div class="customize-input">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập tên nhà cung cấp ..."
+              />
+            </div>
           </div>
+          <div class="col-lg-9 px-0">
+            <div class="pt-4" style="padding-left: 20px">
+              <button type="button" class="btn btn-primary" id="btn-search">
+                Tìm kiếm
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                style="float: right"
+              >
+                <a
+                  style="color: white !important; text-decoration: none"
+                  href="create_supply.html"
+                  >Thêm</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container-fluid">
-          <table class="table table-hover table-bordered mb-0">
-              <thead class="bg-primary text-white">
-              <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Tên nhà cung cấp</th>
-                  <th scope="col">Địa chỉ liên hệ</th>
-                  <th scope="col">Số điện thoại</th>
-              </tr>
-              </thead>
-              <tbody class="border border-secondary" id="tbl">
-              <tr>
-                  <th scope="row"><a href="update_supply.html?company=Công ty TNHH Long Hải&address=Hà Đông&phone=0974408159" style="text-decoration: none">01</a></th>
-                  <td>Công ty TNHH Long Hải</td>
-                  <td>Hà Đông</td>
-                  <td>0974408159</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_supply.html?company=Công ty thực phẩm Hòa Phát&address=Hải Dương&phone=0123456789" style="text-decoration: none">02</a></th>
-                  <td>Công ty thực phẩm Hòa Phát</td>
-                  <td>Hải Dương</td>
-                  <td>0123456789</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_supply.html?company=Công ty thực phẩm An Vượng&address=Hải Phòng&phone=0987654321" style="text-decoration: none">03</a></th>
-                  <td>Công ty thực phẩm An Vượng</td>
-                  <td>Hải Phòng</td>
-                  <td>0987654321</td>
-              </tr>
-              <tr>
-                  <th scope="row"><a href="update_supply.html?company=Công ty cổ phần Hạ Thiên&address=Bắc Từ Liêm&phone=0974408159" style="text-decoration: none">04</a></th>
-                  <td>Công ty cổ phần Hạ Thiên</td>
-                  <td>Bắc Từ Liêm</td>
-                  <td>0974408159</td>
-              </tr>
-
-              </tbody>
-          </table>
-
+        <table class="table table-hover table-bordered mb-0">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Tên nhà cung cấp</th>
+              <th scope="col">Địa chỉ liên hệ</th>
+              <th scope="col">Số điện thoại</th>
+            </tr>
+          </thead>
+          <tbody class="border border-secondary" id="tbl">
+            <tr>
+              <th scope="row">
+                <a
+                  href="update_supply.html?company=Công ty TNHH Long Hải&address=Hà Đông&phone=0974408159"
+                  style="text-decoration: none"
+                  >01</a
+                >
+              </th>
+              <td>Công ty TNHH Long Hải</td>
+              <td>Hà Đông</td>
+              <td>0974408159</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a
+                  href="update_supply.html?company=Công ty thực phẩm Hòa Phát&address=Hải Dương&phone=0123456789"
+                  style="text-decoration: none"
+                  >02</a
+                >
+              </th>
+              <td>Công ty thực phẩm Hòa Phát</td>
+              <td>Hải Dương</td>
+              <td>0123456789</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a
+                  href="update_supply.html?company=Công ty thực phẩm An Vượng&address=Hải Phòng&phone=0987654321"
+                  style="text-decoration: none"
+                  >03</a
+                >
+              </th>
+              <td>Công ty thực phẩm An Vượng</td>
+              <td>Hải Phòng</td>
+              <td>0987654321</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a
+                  href="update_supply.html?company=Công ty cổ phần Hạ Thiên&address=Bắc Từ Liêm&phone=0974408159"
+                  style="text-decoration: none"
+                  >04</a
+                >
+              </th>
+              <td>Công ty cổ phần Hạ Thiên</td>
+              <td>Bắc Từ Liêm</td>
+              <td>0974408159</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-  </div>
+    </div>
   </body>
   <script type="text/javascript" src="./../js/base.js"></script>
   <script src="./../js/confirm.js"></script>
