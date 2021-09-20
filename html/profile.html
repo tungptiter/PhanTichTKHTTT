@@ -171,8 +171,8 @@
                                     <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
                                     <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                                     <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                                  
-                                    <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                                    <li><a href="./supply.html">Nhập hàng hóa</a></li>                              
+                                    <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                                    <li><a href="./supply.html">Nhập sản phẩm</a></li>                              
                                     <li><a href="./statistic_goods.html">Thống kê sản phẩm theo doanh thu</a></li>
                                     <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
                                     <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng sản phẩm nhập</a></li>
@@ -301,11 +301,11 @@
 		<div class="page-breadcrumb" style="margin-left: 10%">
     <div class="row">
         <div class="col-7 align-self-center">
-            <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Thông tin khách hàng</h4>
+            <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Thông tin người dùng</h4>
             <div class="d-flex align-items-center">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb m-0 p-0">
-                        <li class="breadcrumb-item text-muted active" aria-current="page">Quản lý thông tin khách hàng
+                        <li class="breadcrumb-item text-muted active" aria-current="page">Quản lý thông tin người dùng
                             để bảo mật tài khoản
                         </li>
                     </ol>
@@ -321,51 +321,49 @@
         <div class="row" style="width: 40%; margin-left: 10%;">
             <div class="row form-group">
                 <div class="col-lg">
-                    <div>
-                        <label><strong>Tên Đăng Nhập</strong></label>
-                    </div>
-                    <div class="customize-input">
-                        <input type="text" class="form-control"/>
-                        <p>Tên Đăng nhập chỉ có thể thay đổi một lần.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-lg">
-                    <div>
+                    <div class="pb-2">
                         <label><strong>Họ và tên</strong></label>
                     </div>
                     <div class="customize-input">
-                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control" value="John Alex"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg">
+                    <div class="pb-2">
+                        <label><strong>Mật khẩu</strong></label>
+                    </div>
+                    <div class="customize-input">
+                        <span type="text">********</span> <a href="#">Thay đổi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg">
+                    <div class="pt-3 pb-1">
+                        <label><strong>Email</strong></label>
+                    </div>
+                    <div class="customize-input">
+                        <span type="text">Joh******@gmail.com</span> <a href="#">Thay đổi</a>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row form-group">
                 <div class="col-lg">
-                    <div>
+                    <div class="pt-3 pb-1">
                         <label><strong>Số điện thoại</strong></label>
                     </div>
                     <div class="customize-input">
-                        <input type="number" class="form-control"/>
+                        <span type="text">037*****505</span> <a href="#">Thay đổi</a>
                     </div>
                 </div>
-            </div>
+            </div>            
             <br>
             <div class="row form-group">
                 <div class="col-lg">
-                    <div>
-                        <label><strong>Địa chỉ</strong></label>
-                    </div>
-                    <div class="customize-input">
-                        <input type="text" class="form-control"/>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row form-group">
-                <div class="col-lg">
-                    <div>
+                    <div class="pt-3 pb-1">
                         <label><strong>Giới tính</strong></label>
                     </div>
                     <div class="customize-input">
@@ -384,8 +382,8 @@
             <br>
             <div class="row form-group">
                 <div class="col-lg-4">
-                    <div>
-                        <label><strong>Địa chỉ</strong></label>
+                    <div class="pt-3 pb-1">
+                        <label><strong>Ngày sinh</strong></label>
                     </div>
                     <div class="customize-input">
                         <select name="day" class="form-control">
@@ -427,8 +425,42 @@
                     <div>
                         <label><strong></strong></label>
                     </div>
-                    <div class="customize-input">
+                    <div class="customize-input" style="margin-top: 20px">
                         <input type="month" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="display: flex">
+                <div style="display: flex">
+                    <div style="width: 120px" class="pt-3 pb-1">
+                        <span><strong>Quận / Huyện</strong></span>
+                    </div>
+                    <div style="margin-left: 20px" class="pt-3 pb-1">
+                        <span><strong>Tỉnh / Thành phố</strong></span>
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div style="width: 120px">
+                        <select class="form-control">
+                            <option value="HN">Hà Đông</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 20px; width: 120px">
+                        <select class="form-control">
+                            <option value="HN">Hà Nội</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row form-group">
+                <div class="col-lg">
+                    <div class="pt-3 pb-1">
+                        <label><strong>Địa chỉ</strong></label>
+                    </div>
+                    <div class="customize-input">
+                        <input type="text" class="form-control"/>
                     </div>
                 </div>
             </div>
@@ -437,7 +469,7 @@
                     <div>
                         <label><strong></strong></label>
                     </div>
-                    <div class="customize-input">
+                    <div class="customize-input pb-4">
                         <button class="btn btn-primary" onclick="notification()">Cập nhật</button>
                     </div>
                 </div>

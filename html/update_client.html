@@ -182,8 +182,8 @@
                   <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                            
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>                          
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>                          
                   <li><a href="./statistic_goods.html">Thống kê sản phẩm theo doanh thu</a></li>
                   <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
                   <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng sản phẩm nhập</a></li>
@@ -321,20 +321,10 @@
           <div class="row">
             <div class="form-group col-lg-6">
               <div>
-                <label>Tên đăng nhập</label>
-              </div>
-              <div>
-                <input class="form-control" type="text" id="name" value="TâmHT" disabled="">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-lg-6">
-              <div>
                 <label>Họ và tên</label>
               </div>
               <div>
-                <input class="form-control" type="text" id="address" value="Nguyễn Huy Tâm" disabled="">
+                <input class="form-control" type="text" id="address" value="Nguyễn Hữu Mừng" disabled="">
               </div>
             </div>
           </div>
@@ -344,7 +334,7 @@
                 <label>Email</label>
               </div>
               <div>
-                <input class="form-control" type="text" id="phone" value="tamnh@gmail.com" disabled="">
+                <input class="form-control" type="text" id="phone" value="mungnh@gmail.com" disabled="">
               </div>
             </div>
           </div>
@@ -361,6 +351,58 @@
           <div class="row">
             <div class="form-group col-lg-6">
               <div>
+                <label>Giới tính</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="phone" value="Nam" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Ngày sinh</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="phone" value="05-09-2000" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="display: flex">
+                <div style="display: flex">
+                    <div style="width: 120px">
+                        <span>Quận / Huyện</span>
+                    </div>
+                    <div style="margin-left: 20px">
+                        <span>Tỉnh / Thành phố</span>
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div style="width: 120px">
+                        <select class="form-control" disabled="">
+                            <option value="HN">Hà Đông</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 20px; width: 120px">
+                        <select class="form-control" disabled="">
+                            <option value="HN">Hà Nội</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Địa chỉ</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="phone" value="37 Nguyễn Trãi" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
                 <label>Kích hoạt</label>
               </div>
               <select class="form-control">
@@ -369,6 +411,17 @@
               </select>
             </div>
           </div>
+          <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Ghi chú</label>
+                </div>
+                <div>
+                  <textarea rows="4" class="form-control" type="text">
+                    </textarea>
+                </div>
+              </div>
+            </div>
           <div class="row form-group">
             <div class="col-lg">
               <div>
@@ -376,7 +429,6 @@
               </div>
               <div class="customize-input">
                 <button class="btn btn-success" onclick="btn_update()">Lưu thay đổi</button>
-                <button class="btn btn-danger" onclick="btn_delete()">Xóa</button>
               </div>
             </div>
           </div>

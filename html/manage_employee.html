@@ -27,6 +27,7 @@
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
   <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/manager_product.css" />
   <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -186,8 +187,8 @@
                   </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>
                   <li>
                     <a href="./statistic_goods.html"
                       >Thống kê sản phẩm theo doanh thu</a
@@ -379,7 +380,7 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Nhập tên nhân viên ..."
+                placeholder="Nhập mã hoặc tên nhân viên ..."
               />
             </div>
           </div>
@@ -408,61 +409,75 @@
           <thead class="bg-primary text-white">
             <tr>
               <th scope="col">ID</th>
+              <th scope="col">Mã nhân viên</th>
               <th scope="col">Tên nhân viên</th>
-              <th scope="col">Địa chỉ liên hệ</th>
               <th scope="col">Số điện thoại</th>
-              <th scope="col">Vị trí</th>
+              <th scope="col">Email</th>
+              <th scope="col">Lần cuối đăng nhập</th>
               <th scope="col">Trạng thái</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody class="border border-secondary" id="tbl">
             <tr>
-              <th scope="row">
-                <a href="update_employee.html" style="text-decoration: none"
-                  >01</a
-                >
-              </th>
+              <td>01</td>
+              <td>0356482</td>
               <td>Nguyễn Quyết Thắng</td>
-              <td>Hà Nội</td>
               <td>0974408159</td>
-              <td>Nhân viên bán hàng</td>
+              <td>ThangNguyen@gmail.com</td>
+              <td>12-09-2021</td>
               <td>Có</td>
+              <td class="option">
+                <span>
+                  <a href="./create_employee.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./create_employee.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a href="uupdate_employee.html" style="text-decoration: none"
-                  >02</a
-                >
-              </th>
+              <td>02</td>
+              <td>5132462</td>
               <td>Nguyễn Thị Thu Ngân</td>
-              <td>Hải Dương</td>
-              <td>0123456789</td>
-              <td>Nhân viên bán hàng</td>
+              <td>0374625462</td>
+              <td>NganVuiVe@gmail.com</td>
+              <td>12-09-2021</td>
               <td>Có</td>
+              <td class="option">
+                <span>
+                  <a href="./create_employee.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./create_employee.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a href="update_employee.html" style="text-decoration: none"
-                  >03</a
-                >
-              </th>
-              <td>Phạm Thị Khánh Linh</td>
-              <td>Hải Phòng</td>
-              <td>0987654321</td>
-              <td>Nhân viên bán hàng</td>
+              <td>03</td>
+              <td>065213456</td>
+              <td>Tạ Long Thành</td>
+              <td>056521651</td>
+              <td>ThanhLong@gmail.com</td>
+              <td>12-09-2021</td>
               <td>Không</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <a href="update_employee.html" style="text-decoration: none"
-                  >04</a
-                >
-              </th>
-              <td>Nguyễn Thu Hiền</td>
-              <td>Bắc Từ Liêm</td>
-              <td>0974408159</td>
-              <td>Nhân viên bán hàng</td>
-              <td>Có</td>
+              <td class="option">
+                <span>
+                  <a href="./create_employee.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./create_employee.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
           </tbody>
         </table>

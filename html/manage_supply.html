@@ -27,6 +27,7 @@
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
   <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/manager_product.css" />
   <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -186,8 +187,8 @@
                   </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>
                   <li>
                     <a href="./statistic_goods.html"
                       >Thống kê sản phẩm theo doanh thu</a
@@ -353,7 +354,7 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Nhập tên nhà cung cấp ..."
+                placeholder="Nhập mã hoặc tên nhà cung cấp ..."
               />
             </div>
           </div>
@@ -381,60 +382,76 @@
         <table class="table table-hover table-bordered mb-0">
           <thead class="bg-primary text-white">
             <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Tên nhà cung cấp</th>
-              <th scope="col">Địa chỉ liên hệ</th>
-              <th scope="col">Số điện thoại</th>
+              <th style="text-align: center" scope="col">ID</th>
+              <th style="text-align: center" scope="col">Mã nhà cung cấp</th>
+              <th style="text-align: center" scope="col">Tên nhà cung cấp</th>
+              <th style="text-align: center" scope="col">Số điện thoại</th>
+              <th style="text-align: center" scope="col">Email</th>
+              <th style="text-align: center" scope="col">Lần cuối mua hàng</th>
+              <th style="text-align: center" scope="col">Tổng tiền (VNĐ)</th>
+              <th></th>
             </tr>
           </thead>
           <tbody class="border border-secondary" id="tbl">
             <tr>
-              <th scope="row">
-                <a
-                  href="update_supply.html?company=Công ty TNHH Long Hải&address=Hà Đông&phone=0974408159"
-                  style="text-decoration: none"
-                  >01</a
-                >
-              </th>
+              <td>01</td>
+              <td>CTTNHHLH03586482</td>
               <td>Công ty TNHH Long Hải</td>
-              <td>Hà Đông</td>
               <td>0974408159</td>
+              <td>LongHaiFood@gmail.com</td>
+              <td style="text-align: center">27-09-2021</td>
+              <td style="text-align: end">156.498.000</td>
+              <td class="option">
+                <span>
+                  <a href="./create_supply.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./create_supply.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a
-                  href="update_supply.html?company=Công ty thực phẩm Hòa Phát&address=Hải Dương&phone=0123456789"
-                  style="text-decoration: none"
-                  >02</a
-                >
-              </th>
-              <td>Công ty thực phẩm Hòa Phát</td>
-              <td>Hải Dương</td>
-              <td>0123456789</td>
+              <td>02</td>
+              <td>CTTNHHHT562984</td>
+              <td>Công ty TNHH Hạ Thu</td>
+              <td>0352540648</td>
+              <td>HaThuFood@gmail.com</td>
+              <td style="text-align: center">12-07-2021</td>
+              <td style="text-align: end">7.654.498.000</td>
+              <td class="option">
+                <span>
+                  <a href="./create_supply.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./create_supply.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a
-                  href="update_supply.html?company=Công ty thực phẩm An Vượng&address=Hải Phòng&phone=0987654321"
-                  style="text-decoration: none"
-                  >03</a
-                >
-              </th>
-              <td>Công ty thực phẩm An Vượng</td>
-              <td>Hải Phòng</td>
-              <td>0987654321</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <a
-                  href="update_supply.html?company=Công ty cổ phần Hạ Thiên&address=Bắc Từ Liêm&phone=0974408159"
-                  style="text-decoration: none"
-                  >04</a
-                >
-              </th>
-              <td>Công ty cổ phần Hạ Thiên</td>
-              <td>Bắc Từ Liêm</td>
-              <td>0974408159</td>
+              <td>03</td>
+              <td>CTTNHVTH52334565</td>
+              <td>Công ty TNHH Lanh Thắng</td>
+              <td>048725642</td>
+              <td>VuaThit@gmail.com</td>
+              <td style="text-align: center">12-04-2021</td>
+              <td style="text-align: end">46.498.000</td>
+              <td class="option">
+                <span>
+                  <a href="./create_supply.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./create_supply.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
           </tbody>
         </table>

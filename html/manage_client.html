@@ -27,6 +27,7 @@
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
   <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/manager_product.css" />
   <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -186,8 +187,8 @@
                   </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>
                   <li>
                     <a href="./statistic_goods.html"
                       >Thống kê sản phẩm theo doanh thu</a
@@ -391,73 +392,66 @@
           <thead class="bg-primary text-white">
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Tên đăng nhập</th>
               <th scope="col">Họ và tên</th>
               <th scope="col">Số điện thoại</th>
               <th scope="col">Email</th>
+              <th scope="col">Lần cuối mua hàng</th>
+              <th scope="col">Tổng tiền</th>
               <th scope="col">Active</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody class="border border-secondary" id="tbl">
             <tr>
-              <th scope="row">
-                <a href="update_client.html" style="text-decoration: none"
-                  >01</a
-                >
-              </th>
-              <td>TungNT</td>
+              <td>01</td>
+              <td>Nguyễn Bảo Trung</td>
+              <td>0374356842</td>
+              <td>trungbn@gmail.com</td>
+              <td>08-02-2021</td>
+              <td>5.945.000</td>
+              <td>Không</td>
+              <td class="option">
+                <span>
+                  <a href="./update_client.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>02</td>
               <td>Nguyễn Thanh Tùng</td>
               <td>0374356842</td>
               <td>tungnt@gmail.com</td>
+              <td>12-09-2021</td>
+              <td>945.000</td>
               <td>Có</td>
+              <td class="option">
+                <span>
+                  <a href="./update_client.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a href="update_client.html" style="text-decoration: none"
-                  >02</a
-                >
-              </th>
-              <td>DucDN</td>
+              <td>03</td>
               <td>Đinh Ngọc Đức</td>
-              <td>0564238452</td>
+              <td>03546574652</td>
               <td>ducdn@gmail.com</td>
+              <td>01-05-2021</td>
+              <td>505.000</td>
               <td>Có</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <a href="update_client.html" style="text-decoration: none"
-                  >03</a
-                >
-              </th>
-              <td>ThinPT</td>
-              <td>Phan Văn Thìn</td>
-              <td>0374306505</td>
-              <td>thinpt@gmail.com</td>
-              <td>Không</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <a href="update_client.html" style="text-decoration: none"
-                  >04</a
-                >
-              </th>
-              <td>TrungNB</td>
-              <td>Nguyễn Bảo Trung</td>
-              <td>0354265821</td>
-              <td>trungnb@gmail.com</td>
-              <td>Có</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <a href="update_client.html" style="text-decoration: none"
-                  >04</a
-                >
-              </th>
-              <td>MừngNH</td>
-              <td>Nguyễn Hữu Mừng</td>
-              <td>0364524963</td>
-              <td>mungnh@gmail.com</td>
-              <td>Không</td>
+              <td class="option">
+                <span>
+                  <a href="./update_client.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
           </tbody>
         </table>

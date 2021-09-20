@@ -29,8 +29,19 @@
   <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
   <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
-  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
+  <script>
+
+    $(document).ready(function () {
+        $('.select-search').selectize({
+            sortField: 'text'
+        });
+    });
+
+  </script>
   <script>
     $(document).ready(function () {
       $(".profile .icon_wrap").click(function () {
@@ -182,8 +193,8 @@
                   <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                            
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>                          
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>                          
                   <li><a href="./statistic_goods.html">Thống kê sản phẩm theo doanh thu</a></li>
                   <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
                   <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng sản phẩm nhập</a></li>
@@ -321,7 +332,7 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập họ và tên</label>
+                  <label>Mã nhà cung cấp</label>
                 </div>
                 <div>
                   <input class="form-control" type="text">
@@ -331,7 +342,7 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập địa chỉ liên hệ</label>
+                  <label>Tên nhà cung cấp</label>
                 </div>
                 <div>
                   <input class="form-control" type="text">
@@ -341,10 +352,93 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập số điện thoại</label>
+                  <label>Số điện thoại</label>
                 </div>
                 <div>
                   <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Email</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Chinh nhánh</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Công ty</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Địa chỉ</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Mã số thuế</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Nhóm nhà cung cấp</label>
+                </div>
+                  <select class="select-search form-control" id="select-state" placeholder="Chọn nhóm nhà cung cấp...">
+                    <option value="">Chọn nhóm nhà cung cấp</option>
+                    <option value="AL">Đồ chơi</option>
+                    <option value="AK">Đồ gia dụng</option>
+                    <option value="AZ">Thêm nhóm mới</option>
+                  </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Tổng tiền</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Ghi chú</label>
+                </div>
+                <div>
+                  <textarea rows="4" class="form-control" type="text"></textarea>
                 </div>
               </div>
             </div>

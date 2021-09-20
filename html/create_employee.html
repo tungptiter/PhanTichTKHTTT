@@ -182,8 +182,8 @@
                   <li><a href="./manage_employee.html">Quản lý nhân viên</a></li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>                            
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>                          
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>                          
                   <li><a href="./statistic_goods.html">Thống kê sản phẩm theo doanh thu</a></li>
                   <li><a href="./statistic_guest.html">Thống kê khách hàng theo doanh thu</a></li>
                   <li><a href="./statistic_supply.html">Thống kê nhà cung cấp theo lượng sản phẩm nhập</a></li>
@@ -321,7 +321,7 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập tên nhân viên</label>
+                  <label>Mã nhân viên</label>
                 </div>
                 <div>
                   <input class="form-control" type="text">
@@ -331,7 +331,7 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập địa chỉ liên hệ</label>
+                  <label>Tên nhân viên</label>
                 </div>
                 <div>
                   <input class="form-control" type="text">
@@ -341,7 +341,7 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập số điện thoại</label>
+                  <label>CMND</label>
                 </div>
                 <div>
                   <input class="form-control" type="text">
@@ -351,25 +351,106 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Nhập vị trí</label>
+                  <label>Số điện thoại</label>
                 </div>
                 <div>
-                  <select class="form-control" id="filter">
-                    <option selected value="active">Nhân viên bán hàng</option>
-                </select>
+                  <input class="form-control" type="text">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-lg-6">
                 <div>
-                  <label>Kích hoạt</label>
+                  <label>Email</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Ngày sinh</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Giới tính</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="display: flex">
+                <div style="display: flex">
+                    <div style="width: 120px">
+                        <span>Quận / Huyện</span>
+                    </div>
+                    <div style="margin-left: 20px">
+                        <span>Tỉnh / Thành phố</span>
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div style="width: 120px">
+                        <select class="form-control">
+                            <option value="HN">Hà Đông</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 20px; width: 120px">
+                        <select class="form-control">
+                            <option value="HN">Hà Nội</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="form-group col-lg-6">
+              <div>
+                <label>Địa chỉ</label>
+              </div>
+              <div>
+                <input class="form-control" type="text" id="phone">
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Lương</label>
+                </div>
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Trạng thái</label>
                 </div>
                 <div>
                   <select class="form-control" id="filter">
                     <option selected value="all">Có</option>
                     <option value="active">Không</option>
                 </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <div>
+                  <label>Ghi chú</label>
+                </div>
+                <div>
+                  <textarea rows="4" class="form-control" type="text">
+                    </textarea>
                 </div>
               </div>
             </div>

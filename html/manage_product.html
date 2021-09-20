@@ -27,6 +27,7 @@
   />
   <link rel="stylesheet" type="text/css" href="./../css/base.css" />
   <link rel="stylesheet" type="text/css" href="./../css/add_good.css" />
+  <link rel="stylesheet" type="text/css" href="./../css/manager_product.css" />
   <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
 
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -323,13 +324,13 @@
             <h4
               class="page-title text-truncate text-dark font-weight-medium mb-1"
             >
-              Tra cứu thông tin hóa đơn
+              Quản lý sản phẩm
             </h4>
             <div class="d-flex align-items-center">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb m-0 p-0">
                   <li class="breadcrumb-item">
-                    <a href="https://google.com" class="text-muted" style=""
+                    <a href="https://google.com" class="text-muted"
                       >Trang chủ</a
                     >
                   </li>
@@ -337,7 +338,7 @@
                     class="breadcrumb-item text-muted active"
                     aria-current="page"
                   >
-                    <a style="color: #3187f1ff">Tra cứu thông tin hóa đơn</a>
+                    <a style="color: #3187f1ff">Quản lý sản phẩm</a>
                   </li>
                 </ol>
               </nav>
@@ -346,115 +347,137 @@
         </div>
       </div>
       <hr />
-      <div class="page-breadcrumb" style="margin-left: 0.3%">
+      <div class="row page-breadcrumb pb-3" style="margin-left: 0.5%">
         <div class="row form-group">
-          <div class="col-lg-3 px-4">
-            <div>
-              <label>Từ ngày</label>
-            </div>
+          <div class="col-lg-3 pt-4 px-2">
             <div class="customize-input">
-              <input type="text" class="form-control" />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập tên sản phẩm ..."
+              />
             </div>
           </div>
-          <div class="col-lg-3 px-4">
-            <div>
-              <label>Đến ngày</label>
-            </div>
-            <div class="customize-input">
-              <input type="text" class="form-control" />
-            </div>
-          </div>
-          <div class="col-lg-6 px-0 pt-4">
-            <div class="">
+          <div class="col-lg-9 px-0">
+            <div class="pt-4" style="padding-left: 20px">
               <button type="button" class="btn btn-primary" id="btn-search">
-                Thống kê
+                Tìm kiếm
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                style="float: right"
+              >
+                <a
+                  style="color: white !important; text-decoration: none"
+                  href="./add_good.html"
+                  >Thêm</a
+                >
               </button>
             </div>
           </div>
-        </div>
-      </div>
-      <hr />
-      <div class="row page-breadcrumb pb-3" style="margin-left: 0.2%">
-        <div class="col-lg-3">
-          <div class="customize-input">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Nhập mã hóa đơn ..."
-            />
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <button type="button" class="btn btn-primary" id="btn-search">
-            Tìm kiếm
-          </button>
         </div>
       </div>
       <div class="container-fluid">
         <table class="table table-hover table-bordered mb-0">
           <thead class="bg-primary text-white">
             <tr>
-              <th scope="col">Mã hóa đơn</th>
-              <th scope="col">Tên khách hàng</th>
-              <th scope="col">Số điện thoại</th>
-              <th scope="col">Địa chỉ</th>
-              <th scope="col">Ngày mua</th>
-              <th scope="col">Trạng thái</th>
+              <th scope="col">ID</th>
+              <th scope="col">Mã sản phẩm</th>
+              <th scope="col">Tên sản phẩm</th>
+              <th scope="col">Giá nhập</th>
+              <th scope="col">Giá bán</th>
+              <th scope="col">Nhà cung cấp</th>
+              <th scope="col">Hàng tồn</th>
+              <th scope="col">Lần cập nhật cuối cùng</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody class="border border-secondary" id="tbl">
             <tr>
-              <th scope="row">
-                <a href="bill.html" style="text-decoration: none">5863972152</a>
-              </th>
-              <td>Nguyễn Thanh Tùng</td>
-              <td>0374356842</td>
-              <td>Hải Dương</td>
-              <td>16-09-2021</td>
-              <td>Đã xuất</td>
+              <td>01</td>
+              <td>MTHH001</td>
+              <td>Mì tôm hảo hảo</td>
+              <td>90.000</td>
+              <td>120.000</td>
+              <td>Công ty thực phẩm Long Thành</td>
+              <td>20</td>
+              <td>17-09-2021</td>
+              <td class="option">
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a href="bill.html" style="text-decoration: none">2563972147</a>
-              </th>
-              <td>Đinh Ngọc Đức</td>
-              <td>0374356842</td>
-              <td>Ninh Bình</td>
-              <td>16-09-2021</td>
-              <td>Hoàn thành</td>
+              <td>02</td>
+              <td>MTHH002</td>
+              <td>Mì tôm vị chanh</td>
+              <td>92.000</td>
+              <td>130.000</td>
+              <td>Công ty thực phẩm Long Thành</td>
+              <td>150</td>
+              <td>12-09-2021</td>
+              <td class="option">
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a href="bill.html" style="text-decoration: none"
-                  >35639721342</a
-                >
-              </th>
-              <td>Phan Văn Thìn</td>
-              <td>0374356842</td>
-              <td>Hải Phòng</td>
-              <td>16-09-2021</td>
-              <td>Bị hủy</td>
+              <td>03</td>
+              <td>TLCC002</td>
+              <td>Thịt lợn cao cấp 15kg</td>
+              <td>23.000</td>
+              <td>26.000</td>
+              <td>Công ty thực TNHH Hạ Thu</td>
+              <td>100</td>
+              <td>20-09-2021</td>
+              <td class="option">
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
             </tr>
             <tr>
-              <th scope="row">
-                <a href="bill.html" style="text-decoration: none">1463972135</a>
-              </th>
-              <td>Nguyễn Bảo Trung</td>
-              <td>0374356842</td>
-              <td>Nghệ An</td>
-              <td>16-09-2021</td>
-              <td>Đã xuất</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <a href="bill.html" style="text-decoration: none">1463972135</a>
-              </th>
-              <td>Nguyễn Hữu Mừng</td>
-              <td>0374356842</td>
-              <td>Hà Nội</td>
-              <td>16-09-2021</td>
-              <td>Đã xuất</td>
-            </tr>
+              <td>01</td>
+              <td>NM005</td>
+              <td>Nước mắm Cát Hải</td>
+              <td>100.000</td>
+              <td>130.000</td>
+              <td>Công ty Cát Tường</td>
+              <td>200</td>
+              <td>18-09-2021</td>
+              <td class="option">
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_view.png"></a>
+                </span>
+                <span>
+                  <a href="./add_good.html"><img src="./../img/icon_edit.png">
+                </span>
+                <span>
+                  <img src="./../img/icon_remove.png">
+                </span>
+              </td>
+            </tr>            
           </tbody>
         </table>
       </div>

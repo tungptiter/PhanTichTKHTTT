@@ -21,12 +21,23 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
     crossorigin="anonymous"
   />
-  <!-- <link rel="stylesheet" type="text/css" href="./../css/base.css" />
-  <link rel="stylesheet" type="text/css" href="./../css/add_good.css" /> -->
-  <!-- <link rel="stylesheet" type="text/css" href="./../css/btn_specical.css"> -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
+  <script>
+
+    $(document).ready(function () {
+        $('.select-search').selectize({
+            sortField: 'text'
+        });
+    });
+
+  </script>
+
 
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>
     $(document).ready(function () {
       $(".profile .icon_wrap").click(function () {
@@ -182,8 +193,8 @@
                   </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>
                   <li>
                     <a href="./statistic_goods.html"
                       >Thống kê sản phẩm theo doanh thu</a
@@ -317,128 +328,133 @@
       <div class="container">
         <h3 class="text-center">Thêm Thông Tin Sản Phẩm</h3>
         <div class="row align-items-center justify-content-center">
-          <!-- Nhập hàng hóa -->
+          <!-- Nhập sản phẩm -->
           <div class="col-md-5">
-            <h5 class="my-3">Tìm nhà cung cấp</h5>
-            <form class="search_form d-flex">
-              <input
-                class="form-control me-2"
-                id="search_hh"
-                type="search"
-                placeholder="Nhập tên hoặc mã hàng hóa cần tìm"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                  />
-                </svg>
-              </button>
-            </form>
-            <div id="match-list-hh"></div>
+            <h5 class="my-3">Nhà cung cấp</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Chọn nhà cung cấp...">
+              <option value="">Chọn nhà cung cấp</option>
+              <option value="AL">Công ty TNHH Long Á</option>
+              <option value="AK">Công ty cổ phẩn thạch rau câu Long Hải</option>
+              <option value="AZ">Công ty Tân Sơn</option>
+              <option value="AR">Công ty thực phẩn Hạ Thu</option>
+              <option value="CA">Công ty TNHH Sơn Bình</option>
+              <option value="FA">Thêm nhà cung cấp</option>
+            </select>
           </div>
-          <!-- End of Nhập hàng hóa -->
+          <!-- End of Nhập sản phẩm -->
 
           <!-- Nhập nhà cung cấp-->
           <div class="col-md-5">
-            <h5 class="my-3">Tên sản phẩm</h5>
+            <h5 class="my-3">Mã sản phẩm</h5>
             <!-- <input type="text" > -->
             <input
               class="form-control"
               type="text"
-              placeholder="Nhập tên sản phẩm"
+              placeholder="Nhập mã sản phẩm"
             />
           </div>
           <!--end of Nhập nhà cung cấp-->
 
           <!-- Nhập số lượng -->
           <div class="col-md-5">
-            <!-- <h5 class="my-3">Số Lượng Hàng Cần Nhập</h5>
-            <input
-              type="number"
-              id="qty_input"
-              class="form-control form-control-sm"
-              value="1"
-              min="1"
-            /> -->
-            <h5 class="my-3">Đơn vị</h5>
-            <input class="form-control" type="text" value="30.000" />
-          </div>
-          <!-- End of Nhập số lượng -->
 
-          <!-- Hiển thị đơn giá -->
-          <div class="col-md-5">
-            <h5 class="my-3">Giá 1 Sản Phẩm</h5>
-            <input class="form-control" type="text" value="30.000" />
+            <h5 class="my-3">Tên sản phẩm</h5>
+            <input class="form-control" type="text" placeholder="Nhập tên sản phẩm" />
           </div>
-          <!-- End of Hiển thị đơn giá -->
-
-          <!-- NSX và HSD -->
-          <div class="col-md-5">
-            <h5 class="my-3">Ngày Sản Xuất</h5>
-            <input placeholder="Select date" type="date" class="form-control" />
-          </div>
-          <div class="col-md-5">
-            <h5 class="my-3">Hạn Sử Dụng</h5>
-            <input placeholder="Select date" type="date" class="form-control" />
-          </div>
-          <!-- End of NSX và HSD -->
-
-          <!-- Hiển thị Thành tiền -->
-          <div class="col-md-5">
-            <h5 class="my-3">Loại Hàng Hóa</h5>
-
-            <div class="btn-group d-grid gap-5">
-              <button
-                type="button"
-                class="btn btn-primary dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="
-                  background-color: white;
-                  color: black;
-                  border-color: #ced4da;
-                "
-              >
-                Đồ Gia Dụng
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Đồ Điện Tử</a>
-                <a class="dropdown-item" href="#">Đồ Gia Dụng</a>
-                <a class="dropdown-item" href="#">Thực Phẩm</a>
-                <a class="dropdown-item" href="#">Khác</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Thêm mới</a>
-              </div>
-            </div>
-          </div>
-          <!-- End of Hiển thị Thành tiền -->
+          <!-- End of Nhập số lượng -->          
 
           <div class="col-md-5">
-            <h5 class="my-3">Chọn Ảnh Sản Phẩm</h5>
+            <h5 class="my-3">Chọn ảnh sản phẩm</h5>
             <input class="form-control" type="file" id="formFile" multiple />
           </div>
 
           <div class="col-md-5">
-            <h5 class="my-3">Mô Tả Hàng Hóa</h5>
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-            ></textarea>
+            <h5 class="my-3">Nhóm sản phẩm</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Chọn nhóm sản phẩm...">
+              <option value="">Sản phẩm ăn liền</option>
+              <option value="AL">Đồ tươi sống</option>
+              <option value="AK">Đồ uống các loại</option>
+              <option value="AZ">Gia vị, nêm</option>
+              <option value="AR">Nhà cửa đời sống</option>
+              <option value="CA">Chăm sóc thú cưng</option>
+            </select>
+          </div>  
+
+          <div class="col-md-5">
+            <h5 class="my-3">Loại sản phẩm</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Chọn loại sản phẩm...">
+              <option value="">Mì ăn liền</option>
+              <option value="AL">Phở, hủ tiếu, miến</option>
+              <option value="AK">Cháo gói, cháo tươi</option>
+              <option value="AZ">Bánh canh, bánh đa</option>
+              <option value="AR">Lương khô</option>
+            </select>
           </div>
 
-          <div class="col-md-5"></div>
-          <div class="col-md-12 d-inline-flex justify-content-center">
+          <div class="col-md-10" style="display: flex; justify-content: space-between">
+            
+            <div class="col-md-4">
+              <h5 class="my-3">Giá nhập</h5>
+              <input class="form-control" type="text" placeholder="VNĐ" style="text-align: end"/>
+            </div>
+
+            <div class="col-md-3">
+              <h5 class="my-3">Tăng thêm</h5>
+              <input class="form-control" type="text" placeholder="%" style="text-align: end"/>
+            </div>   
+
+            <div class="col-md-4">
+              <h5 class="my-3">Giá bán</h5>
+              <input class="form-control" type="text" placeholder="VNĐ" style="text-align: end"/>
+            </div>  
+
+          </div>  
+
+          <div class="col-md-10">
+            <h5 class="my-3">Mô tả</h5>
+            <textarea class="form-control" rows="4" type="text" placeholder="Mô tả sản phẩm ...." /></textarea>
+          </div>  
+
+          <div class="col-md-5">
+            <h5 class="my-3">Tồn kho</h5>
+            <input class="form-control" type="text" placeholder="0" style="text-align: end" />
+          </div>    
+
+          <div class="col-md-5">
+            <h5 class="my-3">Thiết lập mở rộng</h5>
+            <button class="btn btn-secondary form-control">Thêm thuộc tính</button>
+          </div>
+
+           <div class="col-md-3">
+            <h5 class="my-3">Thuộc tính</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Nhập tên thuộc tính">
+              <option value=""></option>
+              <option value="KL">Khối lượng</option>
+              <option value="PK">Đóng gói</option>           
+              <option value="More">Thêm thuộc tính</option>
+            </select>
+          </div>  
+
+          <div class="col-md-7">
+            <h5 class="my-3">Giá trị thuộc tính</h5>
+            <input class="form-control" id="select-state" placeholder="Nhập giá trị và Enter">
+          </div>
+
+          <div class="col-md-3">
+            <h5 class="my-3">Thuộc tính</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Nhập tên thuộc tính">
+              <option value=""></option>
+              <option value="KL">Khối lượng</option>           
+              <option value="More">Thêm thuộc tính</option>
+            </select>
+          </div>  
+
+          <div class="col-md-7">
+            <h5 class="my-3">Giá trị thuộc tính</h5>
+            <input class="form-control" id="select-state" placeholder="Nhập giá trị và Enter">
+          </div>       
+
+          <div class="col-md-12 d-inline-flex justify-content-center py-4">
             <button
               type="button"
               onclick="luuThongTin()"
@@ -494,14 +510,6 @@
   </body>
   <script type="text/javascript" src="./../js/base.js"></script>
   <script type="text/javascript" src="./../js/search.js"></script>
-  <!-- hiển thị thông báo của sweet alert2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-  <!-- End of hiển thị thông báo của sweet alert2 -->
-  <!-- cdn js -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+  
   <!-- End of cdn js -->
 </html>

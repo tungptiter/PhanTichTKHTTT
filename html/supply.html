@@ -184,8 +184,8 @@
                   </li>
                   <li><a href="./manage_client.html">Quản lý khách hàng</a></li>
                   <li><a href="./confirm.html">Quản lý đơn hàng</a></li>
-                  <li><a href="./add_good.html">Quản lý sản phẩm</a></li>
-                  <li><a href="./supply.html">Nhập hàng hóa</a></li>
+                  <li><a href="./manage_product.html">Quản lý sản phẩm</a></li>
+                  <li><a href="./supply.html">Nhập sản phẩm</a></li>
                   <li>
                     <a href="./statistic_goods.html"
                       >Thống kê sản phẩm theo doanh thu</a
@@ -319,67 +319,28 @@
 
     <section class="nhan-hang-hoa">
       <div class="container">
-        <h3 class="text-center">Nhập Hàng Hóa</h3>
+        <h3 class="text-center">Nhập Sản Phẩm</h3>
         <div class="row align-items-center justify-content-center">
-          <!-- Nhập hàng hóa -->
+          <!-- Nhập sản phẩm -->
           <div class="col-md-5">
-            <h5 class="my-3">Tìm nhà cung cấp</h5>
-            <form class="search_form d-flex">
-              <input
-                class="form-control me-2"
-                id="search_hh"
-                type="search"
-                placeholder="Nhập tên hoặc mã hàng hóa cần tìm"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                  />
-                </svg>
-              </button>
-            </form>
-            <div id="match-list-hh"></div>
+            <h5 class="my-3">Nhà cung cấp</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Chọn nhà cung cấp...">
+              <option value="">Chọn nhà cung cấp</option>
+              <option value="AL">CTTNHHLAC0234-Công ty TNHH Long Á</option>
+              <option value="AK">CTCPTRCLH245-Công ty cổ phẩn thạch rau câu Long Hải</option>
+            </select>
           </div>
-          <!-- End of Nhập hàng hóa -->
+          <!-- End of Nhập sản phẩm -->
 
-          <!-- Nhập hàng hóa -->
-          <div class="col-md-5">
-            <h5 class="my-3">Tên Hàng Hóa</h5>
-            <form class="search_form d-flex">
-              <input
-                class="form-control me-2"
-                id="search_hh"
-                type="search"
-                placeholder="Nhập tên hàng hóa tìm"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                  />
-                </svg>
-              </button>
-            </form>
-            <div id="match-list-hh"></div>
+          <!-- Nhập sản phẩm -->
+            <div class="col-md-5">
+            <h5 class="my-3">Tên sản phẩm</h5>
+            <select class="select-search form-control" id="select-state" placeholder="Chọn sản phẩm...">
+              <option value="">TH54-Thạch</option>
+              <option value="AL">TLTN1295-Thịt lơn</option>
+            </select>
           </div>
-          <!-- End of Nhập hàng hóa -->
+          <!-- End of Nhập sản phẩm -->
 
           <!-- Nhập số lượng -->
           <div class="col-md-5">
@@ -405,28 +366,15 @@
               readonly
             />
           </div>
-          <!-- End of Hiển thị đơn giá -->
-
-          <!-- Hiển thị Thành tiền -->
-          <div class="col-md-5">
-            <h5 class="my-3">Đơn Vị</h5>
-            <input
-              class="form-control"
-              type="text"
-              value="Kg"
-              aria-label="readonly input example"
-              readonly
-            />
-          </div>
           <!-- End of Hiển thị Thành tiền -->
 
           <!-- Buttom hóa đơn và in hóa đơn -->
-          <div class="col-md-5">
+          <div class="col-md-10">
             <h5 class="my-3">Thực hiện</h5>
 
             <!-- <button type="button" class="btn btn-outline-success d-inline-flex">Thành tiền</button> -->
             <button type="button" class="btn btn-success" onclick="luuThongTin()">In hóa đơn</button>
-            <button type="button" class="btn btn-primary" onclick="luuThongTin()">Thêm tiếp mặt hàng</button>
+            <button type="button" class="btn btn-primary" onclick="luuThongTin()">Thêm sản phẩm</button>
           </div>
           <!-- End of Buttom hóa đơn và in hóa đơn -->
         </div>
@@ -441,7 +389,7 @@
               <th scope="col">STT</th>
               <th scope="col">Tên Nhà Cung Cấp</th>
               <th scope="col">Ngày Nhập Hàng</th>
-              <th scope="col">Tên Hàng Hóa</th>
+              <th scope="col">Tên Sản Phẩm</th>
               <th scope="col">Đơn Vị</th>
               <th scope="col">Số Lượng</th>
               <th scope="col">Đơn Giá</th>
